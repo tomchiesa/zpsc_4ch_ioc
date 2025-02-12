@@ -1,0 +1,51 @@
+function(subADCWfProc)
+registrar(PSCRegister)
+variable(PSCDebug, int)
+variable(PSCInactivityTime, int)
+variable(PSCMaxSendBuffer, int)
+
+# PSC wide operations
+#  Link: "@pscname"
+device(bi, INST_IO, devPSCConnectedBi, "PSC Ctrl Connected")
+device(stringin, INST_IO, devPSCMessageSI, "PSC Ctrl Message")
+device(bo, INST_IO, devPSCSendAllBo,   "PSC Ctrl Send All")
+device(longout, INST_IO, devPSCSendLo, "PSC Ctrl Send")
+
+# Operations on entire blocks
+#  Link: "@pscname block#"
+device(stringin,  INST_IO, devPSCBlockSi, "PSC Block")
+device(stringout, INST_IO, devPSCBlockSo, "PSC Block")
+device(waveform, INST_IO, devPSCBlockInWf8,  "PSC Block I8 In")
+device(waveform, INST_IO, devPSCBlockOutWf8, "PSC Block I8 Out")
+device(waveform, INST_IO, devPSCBlockInWf16,  "PSC Block I16 In")
+device(waveform, INST_IO, devPSCBlockOutWf16, "PSC Block I16 Out")
+device(waveform, INST_IO, devPSCBlockInWf32,  "PSC Block I32 In")
+device(waveform, INST_IO, devPSCBlockOutWf32, "PSC Block I32 Out")
+
+# Operations on register blocks
+#  Link: "@pscname block# regoffset"
+#   (offset in bytes)
+# Take data from block received from a PSC
+device(bi,  INST_IO, devPSCRegBi, "PSC Reg")
+device(mbbi,  INST_IO, devPSCRegMbbi, "PSC Reg")
+device(mbbiDirect,  INST_IO, devPSCRegMbbiDirect, "PSC Reg")
+device(longin,  INST_IO, devPSCRegLi, "PSC Reg")
+device(ai,  INST_IO, devPSCRegAi, "PSC Reg")
+
+# Put data into a block to be sent (later) to a PSC
+#  Link: "@pscname block# regoffset"
+#   (offset in bytes)
+device(bo,  INST_IO, devPSCRegBo, "PSC Reg")
+device(mbbo,  INST_IO, devPSCRegMbbo, "PSC Reg")
+device(mbboDirect,  INST_IO, devPSCRegMbboDirect, "PSC Reg")
+device(longout,  INST_IO, devPSCRegLo, "PSC Reg")
+device(ao,  INST_IO, devPSCRegAo, "PSC Reg")
+
+# Echo back data placed in a send block
+#  Link: "@pscname block# regoffset"
+#   (offset in bytes)
+device(bi,  INST_IO, devPSCRegBi, "PSC Reg")
+device(mbbi,  INST_IO, devPSCRegMbbi, "PSC Reg")
+device(mbbiDirect,  INST_IO, devPSCRegMbbiDirect, "PSC Reg")
+device(longin,  INST_IO, devPSCRegLi, "PSC Reg")
+device(ai,  INST_IO, devPSCRegAi, "PSC Reg")

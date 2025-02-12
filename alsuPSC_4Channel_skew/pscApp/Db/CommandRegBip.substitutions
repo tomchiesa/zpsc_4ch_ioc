@@ -1,0 +1,30 @@
+file CommandRegBip.template
+{pattern
+{RegIndex,RegName,LOPR,HOPR,SCAN}
+#cmdCommon2
+{328,PSAddr1-sp,0,65535,"2 second"}
+{332,PSAddr2-sp,0,65535,"2 second"}
+{336,PSAddr3-sp,0,65535,"2 second"}
+{340,PSAddr4-sp,0,65535,"2 second"}
+{344,Setpoint-Conversion,-131072,131072,"2 second"}
+{348,dcct1ADC:Chan1-Gain,-131072,131071,"2 second"}
+{352,dcct2ADC:Chan1-Gain,-131072,131071,"2 second"}
+{356,dcct1ADC:Chan2-Gain,-131072,131071,"2 second"}
+{360,dcct2ADC:Chan2-Gain,-131072,131071,"2 second"}
+{364,dcct1ADC:Chan3-Ofst,-131072,131071,"2 second"}
+{368,dcct2ADC:Chan3-Ofst,-131072,131071,"2 second"}
+{372,dcct1ADC:Chan4-Ofst,-131072,131071,"2 second"}
+{376,dcct2ADC:Chan4-Ofst,-131072,131071,"2 second"}
+
+#cmdCommon3
+{384,Chan1-VOLT-Mon-Gain,-131072,131071,"2 second"}
+{388,Chan2-VOLT-Mon-Gain,-131072,131071,"2 second"}
+{392,Chan3-VOLT-Mon-Gain,-131072,131071,"2 second"}
+{396,Chan4-VOLT-Mon-Gain,-131072,131071,"2 second"}
+{400,Chan1-VOLT-Mon-Ofst,-131072,131071,"2 second"}
+{404,Chan2-VOLT-Mon-Ofst,-131072,131071,"2 second"}
+{408,Chan3-VOLT-Mon-Ofst,-131072,131071,"2 second"}
+{412,Chan4-VOLT-Mon-Ofst,-131072,131071,"2 second"}
+}
+
+

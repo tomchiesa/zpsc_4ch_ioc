@@ -1,0 +1,20 @@
+record(longin, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG)-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 $(BYTENUM)")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG)-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG)-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG)-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG) PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip$(WORDNUM)Word-$(REG)") {
+}

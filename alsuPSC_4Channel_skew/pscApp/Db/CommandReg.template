@@ -1,0 +1,11 @@
+record(longout, "$(PriSys){$(PSC):Chan$(CHAN)}$(RegName)") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "$(SCAN)")
+  field(HOPR,"$(HOPR)")
+  field(LOPR,"$(LOPR)")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 $(RegIndex)")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+

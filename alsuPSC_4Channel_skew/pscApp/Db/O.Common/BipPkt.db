@@ -1,0 +1,4800 @@
+record(longin, "$(PriSys){$(PSC)}Bip1Word-0-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 144")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-0-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-0-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-0-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-0 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-0") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-1-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 148")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-1-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-1-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-1-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-1 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-1") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-2-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 152")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-2-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-2-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-2-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-2 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-2") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-3-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 156")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-3-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-3-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-3-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-3 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-3") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-4-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 160")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-4-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-4-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-4-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-4 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-4") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-5-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 164")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-5-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-5-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-5-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-5 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-5") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-6-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 168")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-6-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-6-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-6-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-6 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-6") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-7-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 172")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-7-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-7-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-7-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-7 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-7") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-8-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 176")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-8-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-8-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-8-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-8 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-8") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-9-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 180")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-9-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-9-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-9-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-9 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-9") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-10-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 184")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-10-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-10-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-10-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-10 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-10") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-11-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 188")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-11-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-11-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-11-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-11 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-11") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-12-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 192")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-12-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-12-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-12-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-12 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-12") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-13-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 196")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-13-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-13-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-13-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-13 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-13") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-14-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 200")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-14-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-14-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-14-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-14 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-14") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-15-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 204")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-15-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-15-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-15-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-15 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-15") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-16-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 208")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-16-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-16-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-16-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-16 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-16") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-17-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 212")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-17-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-17-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-17-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-17 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-17") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-18-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 216")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-18-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-18-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-18-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-18 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-18") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-19-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 220")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-19-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-19-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-19-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-19 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-19") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-20-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 224")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-20-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-20-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-20-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-20 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-20") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-21-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 228")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-21-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-21-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-21-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-21 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-21") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-22-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 232")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-22-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-22-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-22-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-22 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-22") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-23-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 236")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-23-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-23-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-23-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-23 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-23") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-24-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 240")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-24-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-24-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-24-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-24 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-24") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-25-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 244")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-25-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-25-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-25-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-25 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-25") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-26-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 248")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-26-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-26-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-26-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-26 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-26") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-27-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 252")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-27-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-27-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-27-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-27 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-27") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-28-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 256")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-28-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-28-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-28-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-28 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-28") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-29-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 260")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-29-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-29-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-29-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-29 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-29") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-30-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 264")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-30-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-30-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-30-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-30 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-30") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-31-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 268")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-31-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-31-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-31-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-31 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-31") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-32-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 272")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-32-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-32-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-32-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-32 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-32") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-33-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 276")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-33-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-33-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-33-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-33 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-33") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-34-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 280")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-34-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-34-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-34-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-34 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-34") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-35-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 284")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-35-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-35-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-35-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-35 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-35") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-36-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 288")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-36-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-36-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-36-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-36 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-36") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-37-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 292")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-37-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-37-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-37-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-37 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-37") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-38-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 296")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-38-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-38-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-38-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-38 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-38") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-39-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 300")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-39-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-39-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-39-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-39 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-39") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-40-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 304")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-40-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-40-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-40-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-40 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-40") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-41-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 308")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-41-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-41-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-41-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-41 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-41") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-42-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 312")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-42-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-42-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-42-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-42 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-42") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-43-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 316")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-43-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-43-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-43-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-43 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-43") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-44-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 320")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-44-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-44-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-44-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-44 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-44") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-45-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 324")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-45-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-45-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-45-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-45 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-45") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-46-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 328")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-46-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-46-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-46-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-46 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-46") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-47-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 332")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-47-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-47-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-47-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-47 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-47") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-48-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 336")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-48-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-48-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-48-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-48 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-48") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-49-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 340")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-49-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-49-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-49-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-49 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-49") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-50-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 344")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-50-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-50-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-50-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-50 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-50") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-51-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 348")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-51-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-51-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-51-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-51 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-51") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-52-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 352")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-52-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-52-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-52-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-52 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-52") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-53-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 356")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-53-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-53-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-53-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-53 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-53") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-54-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 360")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-54-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-54-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-54-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-54 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-54") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-55-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 364")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-55-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-55-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-55-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-55 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-55") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-56-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 368")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-56-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-56-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-56-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-56 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-56") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-57-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 372")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-57-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-57-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-57-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-57 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-57") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-58-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 376")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-58-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-58-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-58-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-58 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-58") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip1Word-59-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 380")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip1Word-59-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip1Word-59-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip1Word-59-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip1Word-59 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip1Word-59") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-0-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 384")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-0-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-0-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-0-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-0 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-0") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-1-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 388")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-1-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-1-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-1-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-1 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-1") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-2-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 392")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-2-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-2-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-2-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-2 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-2") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-3-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 396")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-3-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-3-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-3-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-3 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-3") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-4-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 400")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-4-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-4-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-4-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-4 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-4") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-5-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 404")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-5-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-5-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-5-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-5 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-5") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-6-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 408")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-6-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-6-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-6-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-6 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-6") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-7-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 412")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-7-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-7-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-7-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-7 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-7") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-8-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 416")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-8-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-8-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-8-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-8 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-8") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-9-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 420")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-9-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-9-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-9-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-9 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-9") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-10-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 424")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-10-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-10-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-10-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-10 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-10") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-11-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 428")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-11-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-11-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-11-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-11 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-11") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-12-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 432")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-12-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-12-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-12-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-12 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-12") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-13-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 436")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-13-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-13-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-13-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-13 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-13") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-14-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 440")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-14-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-14-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-14-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-14 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-14") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-15-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 444")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-15-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-15-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-15-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-15 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-15") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-16-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 448")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-16-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-16-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-16-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-16 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-16") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-17-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 452")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-17-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-17-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-17-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-17 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-17") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-18-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 456")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-18-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-18-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-18-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-18 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-18") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-19-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 460")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-19-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-19-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-19-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-19 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-19") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-20-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 464")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-20-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-20-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-20-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-20 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-20") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-21-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 468")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-21-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-21-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-21-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-21 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-21") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-22-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 472")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-22-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-22-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-22-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-22 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-22") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-23-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 476")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-23-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-23-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-23-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-23 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-23") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-24-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 480")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-24-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-24-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-24-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-24 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-24") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-25-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 484")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-25-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-25-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-25-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-25 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-25") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-26-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 488")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-26-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-26-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-26-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-26 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-26") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-27-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 492")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-27-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-27-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-27-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-27 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-27") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-28-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 496")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-28-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-28-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-28-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-28 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-28") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-29-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 500")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-29-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-29-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-29-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-29 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-29") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-30-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 504")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-30-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-30-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-30-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-30 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-30") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-31-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 508")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-31-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-31-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-31-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-31 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-31") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-32-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 512")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-32-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-32-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-32-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-32 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-32") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-33-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 516")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-33-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-33-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-33-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-33 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-33") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-34-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 520")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-34-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-34-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-34-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-34 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-34") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-35-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 524")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-35-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-35-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-35-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-35 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-35") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-36-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 528")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-36-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-36-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-36-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-36 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-36") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-37-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 532")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-37-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-37-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-37-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-37 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-37") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-38-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 536")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-38-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-38-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-38-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-38 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-38") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-39-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 540")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-39-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-39-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-39-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-39 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-39") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-40-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 544")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-40-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-40-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-40-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-40 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-40") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-41-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 548")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-41-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-41-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-41-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-41 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-41") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-42-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 552")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-42-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-42-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-42-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-42 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-42") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-43-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 556")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-43-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-43-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-43-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-43 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-43") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-44-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 560")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-44-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-44-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-44-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-44 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-44") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-45-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 564")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-45-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-45-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-45-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-45 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-45") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-46-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 568")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-46-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-46-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-46-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-46 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-46") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-47-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 572")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-47-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-47-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-47-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-47 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-47") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-48-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 576")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-48-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-48-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-48-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-48 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-48") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-49-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 580")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-49-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-49-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-49-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-49 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-49") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-50-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 584")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-50-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-50-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-50-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-50 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-50") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-51-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 588")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-51-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-51-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-51-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-51 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-51") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-52-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 592")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-52-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-52-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-52-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-52 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-52") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-53-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 596")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-53-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-53-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-53-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-53 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-53") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-54-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 600")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-54-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-54-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-54-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-54 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-54") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-55-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 604")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-55-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-55-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-55-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-55 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-55") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-56-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 608")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-56-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-56-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-56-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-56 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-56") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-57-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 612")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-57-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-57-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-57-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-57 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-57") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-58-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 616")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-58-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-58-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-58-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-58 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-58") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip2Word-59-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 620")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip2Word-59-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip2Word-59-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip2Word-59-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip2Word-59 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip2Word-59") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-0-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 624")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-0-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-0-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-0-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-0 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-0") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-1-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 628")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-1-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-1-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-1-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-1 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-1") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-2-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 632")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-2-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-2-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-2-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-2 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-2") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-3-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 636")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-3-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-3-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-3-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-3 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-3") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-4-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 640")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-4-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-4-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-4-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-4 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-4") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-5-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 644")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-5-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-5-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-5-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-5 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-5") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-6-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 648")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-6-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-6-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-6-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-6 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-6") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-7-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 652")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-7-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-7-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-7-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-7 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-7") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-8-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 656")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-8-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-8-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-8-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-8 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-8") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-9-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 660")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-9-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-9-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-9-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-9 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-9") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-10-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 664")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-10-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-10-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-10-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-10 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-10") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-11-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 668")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-11-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-11-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-11-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-11 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-11") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-12-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 672")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-12-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-12-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-12-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-12 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-12") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-13-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 676")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-13-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-13-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-13-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-13 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-13") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-14-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 680")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-14-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-14-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-14-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-14 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-14") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-15-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 684")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-15-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-15-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-15-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-15 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-15") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-16-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 688")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-16-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-16-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-16-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-16 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-16") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-17-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 692")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-17-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-17-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-17-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-17 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-17") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-18-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 696")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-18-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-18-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-18-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-18 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-18") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-19-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 700")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-19-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-19-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-19-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-19 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-19") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-20-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 704")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-20-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-20-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-20-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-20 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-20") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-21-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 708")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-21-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-21-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-21-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-21 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-21") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-22-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 712")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-22-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-22-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-22-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-22 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-22") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-23-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 716")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-23-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-23-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-23-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-23 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-23") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-24-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 720")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-24-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-24-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-24-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-24 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-24") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-25-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 724")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-25-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-25-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-25-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-25 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-25") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-26-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 728")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-26-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-26-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-26-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-26 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-26") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-27-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 732")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-27-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-27-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-27-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-27 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-27") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-28-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 736")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-28-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-28-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-28-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-28 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-28") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-29-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 740")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-29-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-29-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-29-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-29 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-29") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-30-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 744")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-30-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-30-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-30-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-30 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-30") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-31-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 748")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-31-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-31-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-31-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-31 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-31") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-32-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 752")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-32-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-32-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-32-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-32 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-32") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-33-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 756")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-33-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-33-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-33-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-33 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-33") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-34-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 760")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-34-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-34-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-34-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-34 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-34") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-35-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 764")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-35-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-35-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-35-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-35 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-35") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-36-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 768")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-36-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-36-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-36-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-36 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-36") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-37-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 772")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-37-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-37-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-37-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-37 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-37") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-38-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 776")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-38-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-38-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-38-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-38 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-38") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-39-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 780")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-39-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-39-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-39-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-39 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-39") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-40-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 784")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-40-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-40-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-40-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-40 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-40") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-41-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 788")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-41-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-41-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-41-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-41 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-41") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-42-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 792")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-42-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-42-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-42-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-42 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-42") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-43-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 796")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-43-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-43-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-43-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-43 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-43") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-44-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 800")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-44-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-44-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-44-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-44 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-44") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-45-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 804")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-45-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-45-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-45-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-45 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-45") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-46-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 808")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-46-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-46-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-46-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-46 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-46") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-47-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 812")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-47-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-47-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-47-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-47 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-47") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-48-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 816")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-48-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-48-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-48-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-48 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-48") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-49-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 820")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-49-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-49-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-49-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-49 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-49") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-50-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 824")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-50-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-50-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-50-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-50 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-50") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-51-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 828")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-51-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-51-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-51-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-51 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-51") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-52-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 832")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-52-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-52-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-52-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-52 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-52") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-53-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 836")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-53-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-53-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-53-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-53 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-53") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-54-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 840")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-54-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-54-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-54-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-54 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-54") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-55-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 844")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-55-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-55-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-55-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-55 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-55") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-56-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 848")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-56-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-56-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-56-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-56 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-56") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-57-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 852")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-57-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-57-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-57-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-57 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-57") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-58-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 856")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-58-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-58-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-58-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-58 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-58") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip3Word-59-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 860")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip3Word-59-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip3Word-59-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip3Word-59-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip3Word-59 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip3Word-59") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-0-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 864")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-0-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-0-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-0-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-0 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-0") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-1-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 868")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-1-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-1-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-1-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-1 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-1") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-2-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 872")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-2-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-2-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-2-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-2 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-2") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-3-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 876")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-3-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-3-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-3-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-3 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-3") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-4-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 880")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-4-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-4-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-4-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-4 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-4") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-5-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 884")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-5-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-5-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-5-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-5 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-5") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-6-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 888")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-6-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-6-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-6-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-6 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-6") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-7-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 892")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-7-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-7-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-7-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-7 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-7") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-8-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 896")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-8-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-8-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-8-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-8 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-8") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-9-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 900")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-9-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-9-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-9-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-9 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-9") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-10-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 904")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-10-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-10-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-10-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-10 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-10") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-11-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 908")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-11-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-11-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-11-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-11 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-11") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-12-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 912")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-12-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-12-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-12-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-12 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-12") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-13-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 916")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-13-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-13-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-13-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-13 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-13") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-14-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 920")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-14-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-14-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-14-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-14 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-14") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-15-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 924")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-15-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-15-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-15-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-15 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-15") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-16-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 928")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-16-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-16-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-16-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-16 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-16") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-17-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 932")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-17-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-17-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-17-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-17 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-17") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-18-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 936")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-18-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-18-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-18-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-18 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-18") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-19-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 940")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-19-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-19-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-19-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-19 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-19") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-20-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 944")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-20-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-20-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-20-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-20 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-20") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-21-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 948")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-21-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-21-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-21-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-21 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-21") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-22-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 952")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-22-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-22-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-22-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-22 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-22") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-23-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 956")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-23-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-23-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-23-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-23 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-23") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-24-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 960")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-24-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-24-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-24-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-24 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-24") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-25-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 964")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-25-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-25-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-25-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-25 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-25") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-26-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 968")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-26-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-26-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-26-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-26 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-26") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-27-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 972")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-27-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-27-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-27-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-27 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-27") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-28-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 976")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-28-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-28-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-28-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-28 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-28") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-29-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 980")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-29-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-29-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-29-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-29 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-29") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-30-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 984")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-30-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-30-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-30-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-30 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-30") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-31-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 988")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-31-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-31-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-31-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-31 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-31") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-32-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 992")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-32-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-32-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-32-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-32 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-32") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-33-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 996")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-33-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-33-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-33-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-33 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-33") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-34-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1000")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-34-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-34-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-34-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-34 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-34") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-35-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1004")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-35-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-35-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-35-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-35 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-35") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-36-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1008")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-36-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-36-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-36-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-36 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-36") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-37-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1012")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-37-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-37-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-37-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-37 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-37") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-38-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1016")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-38-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-38-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-38-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-38 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-38") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-39-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1020")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-39-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-39-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-39-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-39 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-39") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-40-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1024")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-40-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-40-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-40-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-40 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-40") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-41-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1028")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-41-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-41-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-41-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-41 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-41") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-42-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1032")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-42-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-42-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-42-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-42 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-42") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-43-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1036")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-43-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-43-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-43-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-43 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-43") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-44-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1040")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-44-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-44-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-44-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-44 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-44") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-45-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1044")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-45-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-45-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-45-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-45 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-45") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-46-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1048")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-46-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-46-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-46-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-46 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-46") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-47-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1052")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-47-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-47-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-47-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-47 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-47") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-48-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1056")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-48-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-48-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-48-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-48 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-48") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-49-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1060")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-49-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-49-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-49-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-49 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-49") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-50-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1064")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-50-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-50-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-50-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-50 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-50") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-51-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1068")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-51-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-51-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-51-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-51 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-51") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-52-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1072")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-52-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-52-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-52-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-52 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-52") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-53-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1076")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-53-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-53-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-53-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-53 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-53") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-54-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1080")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-54-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-54-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-54-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-54 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-54") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-55-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1084")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-55-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-55-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-55-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-55 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-55") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-56-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1088")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-56-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-56-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-56-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-56 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-56") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-57-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1092")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-57-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-57-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-57-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-57 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-57") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-58-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1096")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-58-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-58-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-58-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-58 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-58") {
+}
+record(longin, "$(PriSys){$(PSC)}Bip4Word-59-in")
+{
+  field(DESC, "Bip Pkt Word")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1100")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Bip4Word-59-asub")
+}
+
+record(aSub, "$(PriSys){$(PSC)}Bip4Word-59-asub")
+{
+	field(SNAM, "INT2FLT")
+	field(FTA, "ULONG")
+	field(INPA, "$(PriSys){$(PSC)}Bip4Word-59-in")
+	field(FTVA, "DOUBLE")
+	field(OUTA, "$(PriSys){$(PSC)}Bip4Word-59 PP")	
+}
+
+record(ai, "$(PriSys){$(PSC)}Bip4Word-59") {
+}

@@ -1,0 +1,5 @@
+2025-01-06 20:54:02.177 INFO [Thread 86] com.cosylab.epics.caj.CAJContext (searchResponse) - More than one PVs with name 'ZPSC:SQK{PSC1}Bip4Word-58' detected, additional response from: /192.168.1.100:5064
+2025-01-06 20:54:02.177 INFO [Thread 86] com.cosylab.epics.caj.CAJContext (searchResponse) - More than one PVs with name 'ZPSC:SQK{PSC1}Bip4Word-59' detected, additional response from: /192.168.1.100:5064
+2025-01-06 20:54:02.177 INFO [Thread 86] com.cosylab.epics.caj.CAJContext (searchResponse) - More than one PVs with name 'ZPSC:SQK{PSC1}Bip4Word-57' detected, additional response from: /192.168.1.100:5064
+2025-01-06 20:54:04.595 INFO [Thread 56430] org.csstudio.diirt.util.RegisterDatasource (deregisterDatasource) - deregister Datasource:beast
+2025-01-06 20:54:04.595 INFO [Thread 56430] org.csstudio.diirt.util.RegisterDatasource (deregisterDatasource) - deregister Datasource:archive

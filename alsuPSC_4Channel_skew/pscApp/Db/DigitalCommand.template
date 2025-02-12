@@ -1,0 +1,24 @@
+record(bo, "$(PriSys){$(PSC)}$(BIT)-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}

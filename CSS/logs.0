@@ -1,0 +1,36 @@
+2024-07-08 23:02:54.027 INFO [Thread 46] org.csstudio.security.authentication.UnattendedCallbackHandler (handleText) - OK
+2024-07-08 23:02:54.901 WARNING [Thread 1] org.csstudio.logging.PluginLogListener (logging) - Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+2024-07-08 23:02:54.920 WARNING [Thread 1] org.csstudio.diirt.util.core.preferences.DIIRTPreferences (<init>) - The given DIIRT path doesn't exist [/home/pstester/configuration/diirt].
+2024-07-08 23:02:54.920 WARNING [Thread 1] org.csstudio.diirt.util.core.preferences.DIIRTPreferences (<init>) - The given DIIRT path doesn't exist [/home/pstester/ALSU/CSS/diirt].
+2024-07-08 23:02:54.926 WARNING [Thread 1] javax.xml.bind.ContextFinder (getDeprecatedSystemProperty) - Using non-standard property: javax.xml.bind.context.factory. Property javax.xml.bind.JAXBContextFactory should be used instead.
+2024-07-08 23:02:54.984 WARNING [Thread 1] javax.xml.bind.ContextFinder (getDeprecatedSystemProperty) - Using non-standard property: javax.xml.bind.context.factory. Property javax.xml.bind.JAXBContextFactory should be used instead.
+2024-07-08 23:02:54.992 INFO [Thread 1] org.diirt.util.config.Configuration (getFile) - Loading /tmp/DIIRT14277190187284859327/datasources/datasources.xml
+2024-07-08 23:02:55.634 WARNING [Thread 60] org.csstudio.logging.PluginLogListener (logging) - Removing part descriptor with the 'org.csstudio.pretune' id and the 'pretune' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+2024-07-08 23:03:08.221 INFO [Thread 1] org.csstudio.opibuilder.runmode.LauncherHelper (systemPathToWorkspacePath) - A workspace match for /home/pstester/ALSU/CSS/ALSU_TEST_RACK_TOP.opi could not be found.
+2024-07-08 23:03:08.501 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.503 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.504 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.505 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.505 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.506 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.506 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.506 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.507 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.507 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.508 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.508 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.508 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.509 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.509 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.510 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.510 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.510 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.511 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.511 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.511 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.512 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.512 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.512 INFO [Thread 1] org.csstudio.opibuilder.widgets.editparts.LinkingContainerEditpart (configureDisplayModel) - 
+2024-07-08 23:03:08.520 INFO [Thread 1] org.csstudio.utility.olog.OlogClientFromPreferences (<init>) - Creating Olog client : https://localhost:8181/Olog/resources
+2024-07-08 23:04:02.283 INFO [Thread 68] org.csstudio.diirt.util.RegisterDatasource (deregisterDatasource) - deregister Datasource:beast
+2024-07-08 23:04:02.283 INFO [Thread 68] org.csstudio.diirt.util.RegisterDatasource (deregisterDatasource) - deregister Datasource:archive

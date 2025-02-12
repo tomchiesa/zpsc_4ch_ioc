@@ -1,0 +1,1925 @@
+record(longout, "$(PriSys){$(PSC):Chan1}Mode-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 0")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}Command-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 4")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}SpCount-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 8")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RampSteps-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"2000000")
+  field(LOPR,"10")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 12")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RampTableControl-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 16")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}Jump-Sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 20")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvcThresh1-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 24")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvvThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 28")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RegConErr-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 32")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RegConErrGlitchFlag-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 36")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}IgndThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 40")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}AvgMode-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"3")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 44")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvcThresh2-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 48")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}BipIP1Addr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 52")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}BipMAC1Hi-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 56")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}BipMAC1Lo-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 60")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}Mode-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 64")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}Command-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 68")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}SpCount-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 72")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RampSteps-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"2000000")
+  field(LOPR,"10")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 76")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RampTableControl-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 80")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}Jump-Sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 84")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvcThresh1-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 88")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvvThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 92")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RegConErr-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 96")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RegConErrGlitchFlag-s_oldp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 100")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}IgndThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 104")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}AvgMode-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"3")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 108")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvcThresh2-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 112")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}BipIP2Addr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 116")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}BipMAC2Hi-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 120")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}BipMAC2Lo-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 124")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}Mode-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 128")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}Command-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 132")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}SpCount-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 136")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RampSteps-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"2000000")
+  field(LOPR,"10")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 140")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RampTableControl-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 144")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}Jump-Sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 148")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvcThresh1-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 152")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvvThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 156")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RegConErr-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 160")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RegConErrGlitchFlag-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 164")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}IgndThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 168")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}AvgMode-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"3")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 172")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvcThresh2-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 176")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}BipIP3Addr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 180")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}BipMAC3Hi-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 184")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}BipMAC3Lo-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 188")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}Mode-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 192")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}Command-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 196")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}SpCount-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 200")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RampSteps-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"2000000")
+  field(LOPR,"10")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 204")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RampTableControl-cmd") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 208")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}Jump-Sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "Passive")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 212")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvcThresh1-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 216")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvvThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 220")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RegConErr-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 224")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RegConErrGlitchFlag-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 228")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}IgndThresh-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 232")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}AvgMode-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"3")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 236")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvcThresh2-sp_old") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"262143")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 240")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}BipIP4Addr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 244")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}BipMAC4Hi-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 248")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}BipMAC4Lo-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 252")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}OvcFaltLimit-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 256")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}OvvFaltLimit-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 260")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}ErrFaltLimit-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 264")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}IgndFaltLimit-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 268")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}Flt123Limit-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 272")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}PsOnFlt-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 276")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}PsHBFlt-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 280")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}FltEnableChan12-en") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 284")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}FltEnableChan34-en") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 288")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}FltClearChan12-clr") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 292")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}FltClearChan34-clr") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 296")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}EVRFreq") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 300")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}EVRFreqCodes") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 304")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}EVRTrigCodes") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 308")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dcct1_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 448")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dcct2_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 452")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dcct1_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 456")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dcct2_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 460")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dcct1_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 464")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dcct2_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 468")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dcct1_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 472")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dcct2_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 476")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dac_rdbck_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 480")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}volt_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 484")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}gnd_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 488")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}spare_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 492")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}reg_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 496")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}error_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 500")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dac_rdbck_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 504")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}volt_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 508")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}gnd_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 512")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}spare_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 516")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}reg_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 520")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}error_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 524")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dac_rdbck_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 528")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}volt_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 532")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}gnd_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 536")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}spare_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 540")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}reg_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 544")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}error_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 548")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dac_rdbck_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 552")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}volt_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 556")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}gnd_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 560")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}spare_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 564")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}reg_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 568")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}error_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 572")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dac_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 576")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dac_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 580")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dac_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 584")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dac_gain") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 588")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dcct1_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 592")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dcct2_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 596")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dcct1_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 600")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dcct2_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 604")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dcct1_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 608")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dcct2_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 612")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dcct1_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 616")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dcct2_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 620")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dac_rdbck_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 624")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}volt_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 628")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}gnd_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 632")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}spare_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 636")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}reg_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 640")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}error_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 644")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dac_rdbck_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 648")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}volt_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 652")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}gnd_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 656")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}spare_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 660")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}reg_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 664")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}error_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 668")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dac_rdbck_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 672")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}volt_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 676")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}gnd_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 680")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}spare_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 684")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}reg_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 688")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}error_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 692")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dac_rdbck_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 696")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}volt_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 700")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}gnd_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 704")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}spare_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 708")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}reg_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 712")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}error_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 716")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}dac_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 720")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}dac_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 724")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}dac_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 728")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}dac_offset") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 732")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan0}write_cal_data") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "5 second")
+  field(HOPR,"4294967295")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 736")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvcThresh1-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 740")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvvThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 744")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RegConErr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 748")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}RegConErrGlitchFlag-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 752")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}IgndThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 756")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan1}OvcThresh2-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 760")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvcThresh1-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 764")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvvThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 768")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RegConErr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 772")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}RegConErrGlitchFlag-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 776")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}IgndThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 780")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan2}OvcThresh2-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 784")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvcThresh1-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 788")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvvThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 792")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RegConErr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 796")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}RegConErrGlitchFlag-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 800")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}IgndThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 804")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan3}OvcThresh2-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 808")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvcThresh1-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 812")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvvThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 816")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RegConErr-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 820")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}RegConErrGlitchFlag-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 824")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}IgndThresh-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"1048575")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 828")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+record(longout, "$(PriSys){$(PSC):Chan4}OvcThresh2-sp") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 832")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+

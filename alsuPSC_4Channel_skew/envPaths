@@ -1,0 +1,6 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","psc")
+epicsEnvSet("IOCNAME","psc")
+epicsEnvSet("TOP","/home/pstester/psioc/alsuPSC_4Channel")
+epicsEnvSet("EPICS_BASE","/usr/local/epics/base-3.15.8")
+epicsEnvSet("AUTOSAVE_DIR","$(TOP)/as")

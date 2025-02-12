@@ -1,0 +1,97 @@
+record(longin, "$(PriSys){$(PSC)}stsReg$(stsRegIndex)")
+{
+        field(DESC, "Staus register:$(stsRegIndex)")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 $(stsRegOffset)")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}$(ADC)-Calc1")
+{
+        field(DESC, "$(ADC) 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg$(stsRegIndex)")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}$(ADC)-Calc2")
+{
+        field(DESC, "$(ADC) Average")	
+        field(INPA, "$(PriSys){$(PSC)}$(ADC)-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}$(ADC)-Calc3")
+{
+        field(DESC, "$(ADC) Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}$(ADC)-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}$(ADC)-Gain")
+        field(INPC, "$(PriSys){$(PSC)}$(ADC)-Impd")
+        field(INPD, "$(PriSys){$(PSC)}$(ADC)-Ofst")
+
+        field(CALC, "(($(Res)==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}$(ADC) PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}$(ADC)")
+{
+        field(DESC, "ADC Readback:$(ADC)")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}$(ADC)-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:$(ADC) Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}$(ADC)-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}$(ADC)-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}$(ADC)-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}$(ADC)-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}$(ADC)-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}$(ADC)-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}$(ADC)-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}$(ADC)-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}$(ADC)-OfstReg-out")
+#}
+
+
+
+

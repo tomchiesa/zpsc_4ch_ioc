@@ -1,0 +1,57 @@
+record(calc, "$(PriSys){$(PSC)}digitalCal1") {
+   field(SCAN, ".1 second")
+   field(INPA, "$(PriSys){$(PSC)}Chan1:On1-Cmd PP")
+   field(INPB, "$(PriSys){$(PSC)}Chan1:On2-Cmd PP")
+   field(INPC, "$(PriSys){$(PSC)}Chan1:On3-Cmd PP")
+   field(INPD, "$(PriSys){$(PSC)}Chan1:Spare-Cmd PP")
+   field(INPE, "$(PriSys){$(PSC)}Chan2:On1-Cmd PP")
+   field(INPF, "$(PriSys){$(PSC)}Chan2:On2-Cmd PP")
+   field(INPG, "$(PriSys){$(PSC)}Chan2:On3-Cmd PP")
+   field(INPH, "$(PriSys){$(PSC)}Chan2:Spare-Cmd PP")
+   field(INPI, "$(PriSys){$(PSC)}Chan3:On1-Cmd PP")
+   field(INPJ, "$(PriSys){$(PSC)}Chan3:On2-Cmd PP")
+   field(INPK, "$(PriSys){$(PSC)}Chan3:On3-Cmd PP")
+   field(CALC, "(K<<10)+(J<<9)+(I<<8)+(H<<7)+(G<<6)+(F<<5)+(E<<4)+(D<<3)+(C<<2)+(B<<1)+A")
+   field(FLNK,"$(PriSys){$(PSC)}digitalCal2")
+}
+
+record(calc, "$(PriSys){$(PSC)}digitalCal2") {
+   field(INPA, "$(PriSys){$(PSC)}Chan3:Spare-Cmd PP")
+   field(INPB, "$(PriSys){$(PSC)}Chan4:On1-Cmd PP")
+   field(INPC, "$(PriSys){$(PSC)}Chan4:On2-Cmd PP")
+   field(INPD, "$(PriSys){$(PSC)}Chan4:On3-Cmd PP")
+   field(INPE, "$(PriSys){$(PSC)}Chan4:Spare-Cmd PP")
+   field(INPF, "$(PriSys){$(PSC)}Chan1:Park-Cmd PP")
+   field(INPG, "$(PriSys){$(PSC)}Chan2:Park-Cmd PP")
+   field(INPH, "$(PriSys){$(PSC)}Chan3:Park-Cmd PP")
+   field(INPI, "$(PriSys){$(PSC)}Chan4:Park-Cmd PP")
+   field(INPJ, "$(PriSys){$(PSC)}B20-Cmd PP")
+   field(INPK, "$(PriSys){$(PSC)}B21-Cmd PP")
+   field(CALC, "(K<<10)+(J<<9)+(I<<8)+(H<<7)+(G<<6)+(F<<5)+(E<<4)+(D<<3)+(C<<2)+(B<<1)+A")
+   field(FLNK,"$(PriSys){$(PSC)}digitalCal3")
+}
+
+record(calc, "$(PriSys){$(PSC)}digitalCal3") {
+   field(INPA, "$(PriSys){$(PSC)}B22-Cmd PP")
+   field(INPB, "$(PriSys){$(PSC)}B23-Cmd PP")
+   field(INPC, "$(PriSys){$(PSC)}B24-Cmd PP")
+   field(INPD, "$(PriSys){$(PSC)}B25-Cmd PP")
+   field(INPE, "$(PriSys){$(PSC)}B26-Cmd PP")
+   field(INPF, "$(PriSys){$(PSC)}B27-Cmd PP")
+   field(INPG, "$(PriSys){$(PSC)}B28-Cmd PP")
+   field(INPH, "$(PriSys){$(PSC)}B29-Cmd PP")
+   field(INPI, "$(PriSys){$(PSC)}B30-Cmd PP")
+   field(INPJ, "$(PriSys){$(PSC)}B31-Cmd PP")
+   field(CALC, "(J<<9)+(I<<8)+(H<<7)+(G<<6)+(F<<5)+(E<<4)+(D<<3)+(C<<2)+(B<<1)+A")
+   field(FLNK,"$(PriSys){$(PSC)}digitalCal4")
+}
+
+record(calcout, "$(PriSys){$(PSC)}digitalCal4") {
+   field(INPA, "$(PriSys){$(PSC)}digitalCal1 PP")
+   field(INPB, "$(PriSys){$(PSC)}digitalCal2 PP")
+   field(INPC, "$(PriSys){$(PSC)}digitalCal3 PP")
+   field(CALC, "(C<<22)+(B<<11)+A")
+   field(FLNK, "$(PriSys){$(PSC):Chan1}Command-cmd")
+   field(OUT,  "$(PriSys){$(PSC):Chan1}Command-cmd PP")
+}
+

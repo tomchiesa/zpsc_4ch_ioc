@@ -1,0 +1,8 @@
+file CommandRegAux.template
+{pattern
+{CHAN,SCAN,HOPR_SP,LOPR_SP,HOPR_IMPD,LOPR_IMPD,JumpSpRegName}
+{1,"1 second",29.999,-29.999,10.001,2.001,"Jump-Sp"}
+{2,"1 second",29.999,-29.999,10.001,2.001,"Jump-Sp"}
+{3,"1 second",29.999,-29.999,10.001,2.001,"Jump-Sp"}
+{4,"1 second",29.999,-29.999,10.001,2.001,"Jump-Sp"}
+}

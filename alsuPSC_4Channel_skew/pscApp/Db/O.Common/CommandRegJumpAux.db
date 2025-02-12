@@ -1,0 +1,104 @@
+record(ao, "$(PriSys){$(PSC):Chan1}I:Jump-Sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"29.999")
+  field(LOPR,"-29.999")
+  field(DRVH,"29.999")
+  field(DRVL,"-29.999")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}Jump-Sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan1}Jump-Sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}I:Jump-Sp")
+  field(INPB,"$(PriSys){$(PSC):Chan1}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan1}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan1}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor((((A*C+D)/B)*13107.1)-1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan1}Jump-Sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan1}Jump-Sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}Jump-Sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan1}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan1}Jump-Sp PP")
+}
+record(ao, "$(PriSys){$(PSC):Chan2}I:Jump-Sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"29.999")
+  field(LOPR,"-29.999")
+  field(DRVH,"29.999")
+  field(DRVL,"-29.999")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}Jump-Sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan2}Jump-Sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}I:Jump-Sp")
+  field(INPB,"$(PriSys){$(PSC):Chan2}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan2}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan2}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor((((A*C+D)/B)*13107.1)-1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan2}Jump-Sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan2}Jump-Sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}Jump-Sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan2}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan2}Jump-Sp PP")
+}
+record(ao, "$(PriSys){$(PSC):Chan3}I:Jump-Sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"29.999")
+  field(LOPR,"-29.999")
+  field(DRVH,"29.999")
+  field(DRVL,"-29.999")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}Jump-Sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan3}Jump-Sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}I:Jump-Sp")
+  field(INPB,"$(PriSys){$(PSC):Chan3}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan3}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan3}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor((((A*C+D)/B)*13107.1)-1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan3}Jump-Sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan3}Jump-Sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}Jump-Sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan3}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan3}Jump-Sp PP")
+}
+record(ao, "$(PriSys){$(PSC):Chan4}I:Jump-Sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"29.999")
+  field(LOPR,"-29.999")
+  field(DRVH,"29.999")
+  field(DRVL,"-29.999")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}Jump-Sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan4}Jump-Sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}I:Jump-Sp")
+  field(INPB,"$(PriSys){$(PSC):Chan4}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan4}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan4}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor((((A*C+D)/B)*13107.1)-1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan4}Jump-Sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan4}Jump-Sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}Jump-Sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan4}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan4}Jump-Sp PP")
+}

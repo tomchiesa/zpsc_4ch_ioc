@@ -1,0 +1,892 @@
+record(ao, "$(PriSys){$(PSC):Chan1}I-sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"11.9")
+  field(LOPR,"-11.9")
+  field(DRVH,"11.9")
+  field(DRVL,"-11.9")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}I-Gain-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan1}I-Gain-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")  
+  field(FLNK, "$(PriSys){$(PSC):Chan1}I-Ofst-sp")
+}
+record(ao, "$(PriSys){$(PSC):Chan1}I-Ofst-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")   
+  field(FLNK, "$(PriSys){$(PSC):Chan1}Impd-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan1}Impd-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Amp Per Volt")  
+  field(HOPR,"10.001")
+  field(LOPR,"0.200")
+  field(DRVH,"10.001")
+  field(DRVL,"0.200")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}Polarity-sp")
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}Polarity-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(ZNAM, "Bipolar")
+  field(ONAM, "Unipolar")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}RampRate-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan1}RampRate-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(HOPR,"30.001")
+  field(LOPR,"0.0")
+  field(DRVH,"30.001")
+  field(DRVL,"0.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}RampSteps-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan1}RampSteps-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan1}I-sp-Old")
+  field(INPC,"$(PriSys){$(PSC):Chan1}RampSteps-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan1}RampRate-sp")
+  field(CALC,"(A==B)?C:((A>B)?(((A-B)/D)*10000):(((B-A)/D)*10000))")
+  field(OUT,"$(PriSys){$(PSC):Chan1}RampSteps-sp PP")  
+  field(FLNK, "$(PriSys){$(PSC):Chan1}SpCount-sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan1}SpCount-sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan1}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan1}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan1}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor(((A*C+D)/B)*13107.1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan1}SpCount-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan1}SpCount-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}SpCount-sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan1}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan1}SpCount-sp PP")
+  field(FLNK, "$(PriSys){$(PSC):Chan1}I-sp-Old")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan1}I-sp-Old") {
+  field(INPA,"$(PriSys){$(PSC):Chan1}I-sp")  
+  field(CALC,"A")    
+}
+
+
+##################################################################################
+#EVR Related Controls
+##################################################################################
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVRFreq-val") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR si570 Frequency Setting")
+  field(SCAN, "1 second")
+  field(HOPR,"500.0")
+  field(LOPR,"100.0")
+  field(DRVH,"500.0")
+  field(DRVL,"100.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVRFreq-convert")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVRFreq-convert") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVRFreq-val")  
+  #Can't be Float, mutliply by one million then convert to float in the processor
+  field(CALC,"A*1000000")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreq PP")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR OneHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenKHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Beam Dump Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Diagnostic Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare1 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare2 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao")  
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") 
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao")
+   #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreqCodes PP") 
+}
+ 
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao")
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao")
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao")
+  field(INPD,"$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao")
+  #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(D<<24)+(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRTrigCodes PP")
+}
+
+
+
+
+record(ao, "$(PriSys){$(PSC):Chan2}I-sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"11.9")
+  field(LOPR,"-11.9")
+  field(DRVH,"11.9")
+  field(DRVL,"-11.9")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}I-Gain-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan2}I-Gain-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")  
+  field(FLNK, "$(PriSys){$(PSC):Chan2}I-Ofst-sp")
+}
+record(ao, "$(PriSys){$(PSC):Chan2}I-Ofst-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")   
+  field(FLNK, "$(PriSys){$(PSC):Chan2}Impd-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan2}Impd-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Amp Per Volt")  
+  field(HOPR,"10.001")
+  field(LOPR,"0.200")
+  field(DRVH,"10.001")
+  field(DRVL,"0.200")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}Polarity-sp")
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}Polarity-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(ZNAM, "Bipolar")
+  field(ONAM, "Unipolar")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}RampRate-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan2}RampRate-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(HOPR,"30.001")
+  field(LOPR,"0.0")
+  field(DRVH,"30.001")
+  field(DRVL,"0.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}RampSteps-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan2}RampSteps-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan2}I-sp-Old")
+  field(INPC,"$(PriSys){$(PSC):Chan2}RampSteps-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan2}RampRate-sp")
+  field(CALC,"(A==B)?C:((A>B)?(((A-B)/D)*10000):(((B-A)/D)*10000))")
+  field(OUT,"$(PriSys){$(PSC):Chan2}RampSteps-sp PP")  
+  field(FLNK, "$(PriSys){$(PSC):Chan2}SpCount-sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan2}SpCount-sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan2}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan2}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan2}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor(((A*C+D)/B)*13107.1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan2}SpCount-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan2}SpCount-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}SpCount-sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan2}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan2}SpCount-sp PP")
+  field(FLNK, "$(PriSys){$(PSC):Chan2}I-sp-Old")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan2}I-sp-Old") {
+  field(INPA,"$(PriSys){$(PSC):Chan2}I-sp")  
+  field(CALC,"A")    
+}
+
+
+##################################################################################
+#EVR Related Controls
+##################################################################################
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVRFreq-val") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR si570 Frequency Setting")
+  field(SCAN, "1 second")
+  field(HOPR,"500.0")
+  field(LOPR,"100.0")
+  field(DRVH,"500.0")
+  field(DRVL,"100.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVRFreq-convert")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVRFreq-convert") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVRFreq-val")  
+  #Can't be Float, mutliply by one million then convert to float in the processor
+  field(CALC,"A*1000000")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreq PP")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR OneHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenKHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Beam Dump Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Diagnostic Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare1 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare2 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao")  
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") 
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao")
+   #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreqCodes PP") 
+}
+ 
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao")
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao")
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao")
+  field(INPD,"$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao")
+  #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(D<<24)+(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRTrigCodes PP")
+}
+
+
+
+
+record(ao, "$(PriSys){$(PSC):Chan3}I-sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"11.9")
+  field(LOPR,"-11.9")
+  field(DRVH,"11.9")
+  field(DRVL,"-11.9")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}I-Gain-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan3}I-Gain-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")  
+  field(FLNK, "$(PriSys){$(PSC):Chan3}I-Ofst-sp")
+}
+record(ao, "$(PriSys){$(PSC):Chan3}I-Ofst-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")   
+  field(FLNK, "$(PriSys){$(PSC):Chan3}Impd-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan3}Impd-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Amp Per Volt")  
+  field(HOPR,"10.001")
+  field(LOPR,"0.200")
+  field(DRVH,"10.001")
+  field(DRVL,"0.200")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}Polarity-sp")
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}Polarity-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(ZNAM, "Bipolar")
+  field(ONAM, "Unipolar")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}RampRate-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan3}RampRate-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(HOPR,"30.001")
+  field(LOPR,"0.0")
+  field(DRVH,"30.001")
+  field(DRVL,"0.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}RampSteps-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan3}RampSteps-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan3}I-sp-Old")
+  field(INPC,"$(PriSys){$(PSC):Chan3}RampSteps-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan3}RampRate-sp")
+  field(CALC,"(A==B)?C:((A>B)?(((A-B)/D)*10000):(((B-A)/D)*10000))")
+  field(OUT,"$(PriSys){$(PSC):Chan3}RampSteps-sp PP")  
+  field(FLNK, "$(PriSys){$(PSC):Chan3}SpCount-sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan3}SpCount-sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan3}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan3}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan3}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor(((A*C+D)/B)*13107.1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan3}SpCount-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan3}SpCount-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}SpCount-sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan3}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan3}SpCount-sp PP")
+  field(FLNK, "$(PriSys){$(PSC):Chan3}I-sp-Old")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan3}I-sp-Old") {
+  field(INPA,"$(PriSys){$(PSC):Chan3}I-sp")  
+  field(CALC,"A")    
+}
+
+
+##################################################################################
+#EVR Related Controls
+##################################################################################
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVRFreq-val") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR si570 Frequency Setting")
+  field(SCAN, "1 second")
+  field(HOPR,"500.0")
+  field(LOPR,"100.0")
+  field(DRVH,"500.0")
+  field(DRVL,"100.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVRFreq-convert")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVRFreq-convert") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVRFreq-val")  
+  #Can't be Float, mutliply by one million then convert to float in the processor
+  field(CALC,"A*1000000")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreq PP")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR OneHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenKHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Beam Dump Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Diagnostic Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare1 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare2 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao")  
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") 
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao")
+   #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreqCodes PP") 
+}
+ 
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao")
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao")
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao")
+  field(INPD,"$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao")
+  #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(D<<24)+(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRTrigCodes PP")
+}
+
+
+
+
+record(ao, "$(PriSys){$(PSC):Chan4}I-sp") {
+  field(DESC, "Amp Per Volt")
+  field(SCAN, "1 second")
+  field(HOPR,"11.9")
+  field(LOPR,"-11.9")
+  field(DRVH,"11.9")
+  field(DRVL,"-11.9")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}I-Gain-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan4}I-Gain-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")  
+  field(FLNK, "$(PriSys){$(PSC):Chan4}I-Ofst-sp")
+}
+record(ao, "$(PriSys){$(PSC):Chan4}I-Ofst-sp") {
+  info(autosaveFields, "VAL")
+  field(HOPR,"2.0")
+  field(LOPR,"-2.0")
+  field(DRVH,"2.0")
+  field(DRVL,"-2.0")
+  field(OMSL, "closed_loop")   
+  field(FLNK, "$(PriSys){$(PSC):Chan4}Impd-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan4}Impd-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Amp Per Volt")  
+  field(HOPR,"10.001")
+  field(LOPR,"0.200")
+  field(DRVH,"10.001")
+  field(DRVL,"0.200")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}Polarity-sp")
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}Polarity-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(ZNAM, "Bipolar")
+  field(ONAM, "Unipolar")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}RampRate-sp")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan4}RampRate-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Polarity")  
+  field(HOPR,"30.001")
+  field(LOPR,"0.0")
+  field(DRVH,"30.001")
+  field(DRVL,"0.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}RampSteps-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan4}RampSteps-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan4}I-sp-Old")
+  field(INPC,"$(PriSys){$(PSC):Chan4}RampSteps-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan4}RampRate-sp")
+  field(CALC,"(A==B)?C:((A>B)?(((A-B)/D)*10000):(((B-A)/D)*10000))")
+  field(OUT,"$(PriSys){$(PSC):Chan4}RampSteps-sp PP")  
+  field(FLNK, "$(PriSys){$(PSC):Chan4}SpCount-sp_calc")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan4}SpCount-sp_calc") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}I-sp")
+  field(INPB,"$(PriSys){$(PSC):Chan4}Impd-sp")
+  field(INPC,"$(PriSys){$(PSC):Chan4}I-Gain-sp")
+  field(INPD,"$(PriSys){$(PSC):Chan4}I-Ofst-sp")
+  #Calculate the count: 0-10V 0-0x1FFFF
+  field(CALC,"floor(((A*C+D)/B)*13107.1)")     
+  field(FLNK, "$(PriSys){$(PSC):Chan4}SpCount-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan4}SpCount-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}SpCount-sp_calc")  
+  field(INPB,"$(PriSys){$(PSC):Chan4}Polarity-sp")
+  field(CALC,"(B==1)?((A<0)?0:A):((A<0)?(262143+A):A)")
+  field(OUT,"$(PriSys){$(PSC):Chan4}SpCount-sp PP")
+  field(FLNK, "$(PriSys){$(PSC):Chan4}I-sp-Old")
+}
+
+record(calc, "$(PriSys){$(PSC):Chan4}I-sp-Old") {
+  field(INPA,"$(PriSys){$(PSC):Chan4}I-sp")  
+  field(CALC,"A")    
+}
+
+
+##################################################################################
+#EVR Related Controls
+##################################################################################
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVRFreq-val") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR si570 Frequency Setting")
+  field(SCAN, "1 second")
+  field(HOPR,"500.0")
+  field(LOPR,"100.0")
+  field(DRVH,"500.0")
+  field(DRVL,"100.0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVRFreq-convert")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVRFreq-convert") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVRFreq-val")  
+  #Can't be Float, mutliply by one million then convert to float in the processor
+  field(CALC,"A*1000000")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreq PP")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR OneHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR TenKHz Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Beam Dump Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Diagnostic Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare1 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(ao, "$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao") {
+  info(autosaveFields, "VAL")
+  field(DESC, "EVR Spare2 Code")
+  field(SCAN, "1 second")
+  field(HOPR,"255")
+  field(LOPR,"0")
+  field(DRVH,"255")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateFreqCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao")  
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao") 
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao")
+   #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRFreqCodes PP") 
+}
+ 
+record(calcout, "$(PriSys){$(PSC):Chan0}EVR-ConcatenateTrigCodes") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao")
+  field(INPB,"$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao")
+  field(INPC,"$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao")
+  field(INPD,"$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao")
+  #Concatenate all bytes, they are de-concatenated in the FPGA
+  field(CALC,"(D<<24)+(C<<16)+(B<<8)+A")
+  field(OUT,"$(PriSys){$(PSC):Chan0}EVRTrigCodes PP")
+}
+
+
+
+

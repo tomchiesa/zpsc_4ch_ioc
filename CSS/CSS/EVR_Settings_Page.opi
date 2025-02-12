@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>true</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>true</auto_zoom_to_fit_all>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <grid_space>6</grid_space>
+  <height>900</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <name>EVR $(PSC) Main</name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>false</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>1100</width>
+  <wuid>37410d70:174adf0382a:-7fff</wuid>
+  <x>-1</x>
+  <y>-1</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.RoundedRectangle" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <alpha>255</alpha>
+    <anti_alias>true</anti_alias>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="220" green="200" blue="200" />
+    </background_color>
+    <bg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </bg_gradient_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="133" green="153" blue="210" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <corner_height>16</corner_height>
+    <corner_width>16</corner_width>
+    <enabled>true</enabled>
+    <fg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </fg_gradient_color>
+    <fill_level>0.0</fill_level>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="255" green="0" blue="0" />
+    </foreground_color>
+    <gradient>false</gradient>
+    <height>385</height>
+    <horizontal_fill>true</horizontal_fill>
+    <line_color>
+      <color red="0" green="0" blue="150" />
+    </line_color>
+    <line_style>0</line_style>
+    <line_width>3</line_width>
+    <name>Rounded Rectangle_1</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Rounded Rectangle</widget_type>
+    <width>295</width>
+    <wuid>67576172:183a409812c:-5ce1</wuid>
+    <x>312</x>
+    <y>60</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_101</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-OneHz-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5d02</wuid>
+    <x>498</x>
+    <y>113</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_304</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR 1 Hz Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5d01</wuid>
+    <x>325</x>
+    <y>114</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_102</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-TenHz-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5d00</wuid>
+    <x>498</x>
+    <y>156</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_305</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR 10 Hz Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cff</wuid>
+    <x>325</x>
+    <y>157</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_103</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-TenKHz-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5cfe</wuid>
+    <x>498</x>
+    <y>199</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_306</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR 10 kHz Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cfd</wuid>
+    <x>327</x>
+    <y>200</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_104</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-BeamDump-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5cfc</wuid>
+    <x>498</x>
+    <y>254</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_307</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR Beam Dump Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cfb</wuid>
+    <x>327</x>
+    <y>255</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_105</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-Diagnostic-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5cfa</wuid>
+    <x>498</x>
+    <y>297</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_308</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR Diagnostic Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cf9</wuid>
+    <x>327</x>
+    <y>298</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_106</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-Spare1-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5cf8</wuid>
+    <x>498</x>
+    <y>340</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_309</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR Spare1 Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cf7</wuid>
+    <x>329</x>
+    <y>341</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="2.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <auto_size>false</auto_size>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>1</border_width>
+    <confirm_message></confirm_message>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <format_type>3</format_type>
+    <height>31</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <limits_from_pv>true</limits_from_pv>
+    <multiline_input>false</multiline_input>
+    <name>Text Input_107</name>
+    <precision>0</precision>
+    <precision_from_pv>false</precision_from_pv>
+    <pv_name>$(PriSys){$(PSC):Chan0}EVR-Spare2-Code-ao</pv_name>
+    <pv_value />
+    <rotation_angle>0.0</rotation_angle>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <selector_type>0</selector_type>
+    <show_units>false</show_units>
+    <style>0</style>
+    <text></text>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Text Input</widget_type>
+    <width>75</width>
+    <wuid>67576172:183a409812c:-5cf6</wuid>
+    <x>498</x>
+    <y>384</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_310</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR Spare2 Code</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cf5</wuid>
+    <x>329</x>
+    <y>385</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="1" pixels="false">Default Bold</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="19" green="141" blue="2" />
+    </foreground_color>
+    <height>29</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_311</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>EVR Settings</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>169</width>
+    <wrap_words>false</wrap_words>
+    <wuid>67576172:183a409812c:-5cd5</wuid>
+    <x>372</x>
+    <y>72</y>
+  </widget>
+</display>

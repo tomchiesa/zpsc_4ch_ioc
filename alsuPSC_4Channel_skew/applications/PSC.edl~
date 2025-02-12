@@ -1,0 +1,2565 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 102
+y 71
+w 1200
+h 1100
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 48
+bgColor index 2
+textColor index 27
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "Auto Save"
+endScreenProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 380
+y 16
+w 315
+h 16
+font "helvetica-bold-r-14.0"
+fgColor index 47
+bgColor index 58
+useDisplayBg
+value {
+  "$(PriSys) $(PS) Power Supply Control Pannel"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 607
+y 76
+w 50
+h 16
+controlPv "$(PriSys)\{$(PS)\}ID:IP-I"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 603
+y 56
+w 66
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PSC IP(LSB):"
+}
+autoSize
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 86
+y 14
+w 2
+h 2
+lineColor index 47
+fillColor index 0
+numPoints 0
+xPoints {
+}
+yPoints {
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 32
+y 25
+w 2
+h 2
+lineColor index 19
+fillColor index 0
+closePolygon
+numPoints 0
+xPoints {
+}
+yPoints {
+}
+endObjectProperties
+
+# (Lines)
+object activeLineClass
+beginObjectProperties
+major 4
+minor 0
+release 1
+x 1250
+y 248
+w 2
+h 2
+lineColor index 27
+fillColor index 0
+lineWidth 10
+numPoints 0
+xPoints {
+}
+yPoints {
+}
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 539
+y 56
+w 50
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PSC Fiber"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 538
+y 76
+w 50
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:PscFiberSd-Sts"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 354
+y 79
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Src:Clk-Sel"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 355
+y 59
+w 78
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "Clock Source"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 1222121
+y 539
+w 80
+h 22
+controlPv "$(PriSys)\{$(PS)\}Volt:Ps2ADC16-I"
+format "hex"
+font "helvetica-medium-r-18.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 1084
+y 487
+w 2
+h 0
+font "helvetica-medium-r-18.0"
+fgColor index 18
+bgColor index 0
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 19
+y 208
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:15"
+}
+autoSize
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 625
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:0-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 559
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:1-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 495
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:2-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 431
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:3-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 138
+y 59
+w 107
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PSC Mode Control"
+}
+autoSize
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 79
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Rst:PSC-Cmd"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 94
+y 79
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Enbl:PSC-Cmd"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 179
+y 79
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Enbl:Ramp-Cmd"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 265
+y 79
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Mode:PSC-Sel"
+font "helvetica-medium-r-10.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 366
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:4-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 301
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:5-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 237
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:6-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 173
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:7-Cmd"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 16
+y 155
+w 60
+h 30
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}Mode:Dout-Sel"
+font "helvetica-medium-r-12.0"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 91
+y 155
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}Time:DOPlsWdt-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 89
+y 135
+w 81
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PulseWidth(ms)"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 20
+y 135
+w 61
+h 12
+font "helvetica-bold-r-10.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "D-Out Mode"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 19
+y 227
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:14-Sts"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 871
+y 267
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}DAC:1-Static-Sp"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+autoHeight
+precision 2
+fieldLen "6"
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 874
+y 243
+w 160
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 49
+bgColor index 0
+useDisplayBg
+value {
+  "PS2 Static Setpoint (Amp)"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 871
+y 205
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}DAC:0-Static-Sp"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+autoHeight
+precision 2
+fieldLen "6"
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 871
+y 183
+w 160
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "PS1 Static Setpoint (Amp)"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 997
+y 134
+w 56
+h 16
+controlPv "$(PriSys)\{$(PS)\}I:RampEnd2-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+precision 2
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1093
+y 90
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:RampStart2-Cmd"
+font "helvetica-bold-r-10.0"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 997
+y 86
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}Step:Ramp2-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 1047
+y 54
+w 63
+h 14
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PS2 Break"
+}
+autoSize
+endObjectProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 884
+y 88
+w 80
+h 50
+fgColor index 27
+bgColor index 0
+selectColor index 45
+inconsistentColor index 0
+topShadowColor index 0
+botShadowColor index 0
+controlPv "$(PriSys)\{$(PS)\}DO:RampStart1-Cmd"
+font "helvetica-bold-r-10.0"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 812
+y 133
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}I:RampEnd1-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+precision 2
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 812
+y 85
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}Step:Ramp1-SP"
+format "decimal"
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 467
+y 56
+w 59
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PSI Polarity"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 471
+y 76
+w 50
+h 20
+controlPv "$(PriSys)\{$(PS)\}Pol:PSI-Sts"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 26
+bgColor index 0
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 677
+y 76
+w 50
+h 16
+controlPv "$(PriSys)\{$(PS)\}T:PscFront-I"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 18
+bgColor index 0
+autoHeight
+precision 2
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 676
+y 56
+w 53
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PSC Temp"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 252
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:6"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 321
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:5"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 384
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:4"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 452
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:3"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 513
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:2"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 574
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:1"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 637
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:0"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 756
+y 181
+w 81
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 49
+bgColor index 0
+useDisplayBg
+value {
+  "PS1 Amp/Volt"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 756
+y 203
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}Imp:PS1-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+autoHeight
+precision 2
+fieldLen "6"
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 755
+y 267
+w 60
+h 16
+controlPv "$(PriSys)\{$(PS)\}Imp:PS2-SP"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+autoHeight
+precision 2
+fieldLen "6"
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 754
+y 243
+w 81
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 49
+bgColor index 0
+useDisplayBg
+value {
+  "PS2 Amp/Volt"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 740
+y 76
+w 50
+h 16
+controlPv "$(PriSys)\{$(PS)\}Rdy:Handshaking-Sts"
+format "hex"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+fastUpdate
+useHexPrefix
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 740
+y 56
+w 55
+h 12
+font "helvetica-bold-r-10.0"
+fontAlign "center"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "Handshake"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 813
+y 68
+w 28
+h 14
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Rate"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 772
+y 10
+w 52
+h 22
+controlPv "$(PriSys)\{$(PS)\}hwRev-I"
+format "decimal"
+font "helvetica-medium-r-18.0"
+fgColor index 27
+bgColor index 0
+autoHeight
+precision 1
+fieldLen "6"
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 722
+y 18
+w 47
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "HW Rev"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 111
+y 229
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:14-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 111
+y 210
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:14"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 199
+y 229
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:13-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 199
+y 210
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:13"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 284
+y 229
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:12-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 284
+y 210
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:12"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 632
+y 227
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:08-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 632
+y 208
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:08"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 547
+y 227
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:09-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 547
+y 208
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:09"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 459
+y 227
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:10-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 459
+y 208
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:10"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 370
+y 227
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:11-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 370
+y 208
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:11"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 629
+y 267
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:00-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 629
+y 248
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:00"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 544
+y 267
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:01-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 544
+y 248
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:01"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 456
+y 267
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:02-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 456
+y 248
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:02"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 367
+y 267
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:03-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 367
+y 248
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:03"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 281
+y 269
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:04-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 281
+y 250
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:04"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 196
+y 269
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:05-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 196
+y 250
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:05"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 108
+y 269
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:06-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 108
+y 250
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:06"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 19
+y 269
+w 80
+h 16
+controlPv "$(PriSys)\{$(PS)\}DI:07-Sts"
+font "helvetica-bold-r-14.0"
+fgColor index 18
+bgColor index 0
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 19
+y 250
+w 31
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DI:07"
+}
+autoSize
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 3
+y 298
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS1 ADC(1:Red;2:Blue;3:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh1_1.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh1_2.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh1_3.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 11
+y 810
+w 570
+h 240
+# Appearance
+border
+graphTitle "10KHz ADC"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-14.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 1
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC10KWf1.VALA"
+}
+ySigned {
+  0 1
+}
+plotColor {
+  0 index 21
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 210
+y 784
+w 60
+h 20
+controlPv "$(PriSys)\{$(PS)\}AdcID1-Sel"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 190
+y 135
+w 30
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "DO:7"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 997
+y 69
+w 28
+h 14
+font "helvetica-bold-r-12.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Rate"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 812
+y 116
+w 69
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ending Amp"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 997
+y 118
+w 69
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Ending Amp"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 855
+y 52
+w 63
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 34
+bgColor index 0
+useDisplayBg
+value {
+  "PS1 Break"
+}
+autoSize
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 393
+y 297
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS1 ADC(4:Red;5:Blue;6:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh1_4.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh1_5.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh1_6.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 783
+y 297
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS1 ADC(7:Red;8:Blue;9:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh1_7.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh1_8.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh1_9.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 783
+y 541
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS2 ADC(7:Red;8:Blue;9:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh2_7.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh2_8.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh2_9.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 393
+y 541
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS2 ADC(4:Red;5:Blue;6:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh2_4.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh2_5.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh2_6.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 3
+y 542
+w 385
+h 240
+# Appearance
+border
+graphTitle "1KHz PS2 ADC(1:Red;2:Blue;3:Green)"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-12.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 3
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC1KCh2_1.VALA"
+  1 "$(PriSys)\{$(PS)\}ADC1KCh2_2.VALA"
+  2 "$(PriSys)\{$(PS)\}ADC1KCh2_3.VALA"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+  2 "plot"
+}
+ySigned {
+  0 1
+  1 1
+  2 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+  2 index 16
+}
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 12
+y 788
+w 188
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+value {
+  "Select ADC (PS1:0-7;PS2:8-15)"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 593
+y 788
+w 188
+h 14
+font "helvetica-bold-r-12.0"
+fgColor index 19
+bgColor index 0
+useDisplayBg
+value {
+  "Select ADC (PS1:0-7;PS2:8-15)"
+}
+autoSize
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 5
+release 0
+x 791
+y 784
+w 60
+h 20
+controlPv "$(PriSys)\{$(PS)\}AdcID2-Sel"
+format "decimal"
+font "helvetica-bold-r-14.0"
+fontAlign "center"
+fgColor index 27
+bgColor index 0
+editable
+limitsFromDb
+nullColor index 0
+newPos
+objType "controls"
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 7
+release 0
+# Geometry
+x 592
+y 810
+w 570
+h 240
+# Appearance
+border
+graphTitle "10KHz ADC"
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-bold-r-14.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 1
+yPv {
+  0 "$(PriSys)\{$(PS)\}ADC10KWf2.VALA"
+}
+ySigned {
+  0 1
+}
+plotColor {
+  0 index 21
+}
+endObjectProperties
+

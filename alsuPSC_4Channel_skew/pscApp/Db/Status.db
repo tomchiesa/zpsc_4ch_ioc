@@ -1,0 +1,2040 @@
+# Will move to ADCWaveform.db
+#Rx Connection PV
+record(bi, "$(PriSys){$(PSC)}Rxconn") {
+  #field(DTYP, "PSC Ctrl Connected")
+  field(DTYP, "PSC Reg")
+  #field(INP , "@StatusPort_$(PSC)")
+  field(INP , "@StatusPort_$(PSC) 64")
+  field(SCAN, "I/O Intr")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  field(ZSV , "MAJOR")
+}
+
+#Fault Status Registers 
+
+record(longin, "$(PriSys){$(PSC)}stsRegFault12")
+{
+        field(DESC, "Status register:Fault12")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 128")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1:ovc1-flt")	
+}
+
+# Status Register Flags
+
+#Faults Channel 1
+
+record(calcout, "$(PriSys){$(PSC)}Chan1:ovc1-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000001)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:ovc2-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:ovc2-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000002)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:ovv-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:ovv-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000004)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:error-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:error-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000008)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:glitch-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:glitch-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000010)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:gnd-flt") }
+ 
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:gnd-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x000000020)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:dcctstatus-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:dcctstatus-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000040)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:Bipsummary-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:Bipsummary-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000080)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:stsRegFault1B8") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:stsRegFault1B8") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000100)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:extintf-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:extintf-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000200)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:BipOn-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:BipOn-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000400)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:BipHeartbeat-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:BipHeartbeat-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00000800)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:EVR-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan1:EVR-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00001000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}stsRegFault1B13") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}stsRegFault1B13") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00002000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}stsRegFault1B14") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}stsRegFault1B14") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00004000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}stsRegFault1B15") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}stsRegFault1B15") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00008000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:ovc1-flt") }
+  
+#Faults Channel 2
+ 
+ record(calc, "$(PriSys){$(PSC)}Chan2:ovc1-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00010000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:ovc2-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:ovc2-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00020000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:ovv-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:ovv-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00040000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:error-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:error-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00080000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:glitch-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:glitch-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00100000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:gnd-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:gnd-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00200000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:dcctstatus-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:dcctstatus-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00400000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:Bipsummary-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:Bipsummary-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x00800000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:stsRegFault2B24") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:stsRegFault2B24") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x01000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:extintf-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:extintf-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x02000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:BipOn-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:BipOn-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x04000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:BipHeartbeat-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:BipHeartbeat-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x08000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:EVR-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:EVR-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x10000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:stsRegFault2B29") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:stsRegFault2B29") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x20000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:stsRegFault2B30") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:stsRegFault2B30") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x40000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:stsRegFault2B31") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan2:stsRegFault2B31") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault12")
+  field(CALC, "(A&0x80000000)?1:0")
+ }
+  
+  
+record(longin, "$(PriSys){$(PSC)}stsRegFault34")
+{
+        field(DESC, "Staus register:Fault34")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 132")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3:ovc1-flt")	
+}
+
+#Faults Channel 3
+
+record(calcout, "$(PriSys){$(PSC)}Chan3:ovc1-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000001)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:ovc2-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:ovc2-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000002)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:ovv-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:ovv-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000004)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:error-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:error-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000008)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:glitch-flt") }
+
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:glitch-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000010)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:gnd-flt") }
+ 
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:gnd-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x000000020)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:dcctstatus-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:dcctstatus-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000040)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:Bipsummary-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:Bipsummary-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000080)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:stsRegFault1B8") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:stsRegFault1B8") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000100)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:extintf-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:extintf-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000200)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:BipOn-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:BipOn-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000400)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:BipHeartbeat-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:BipHeartbeat-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00000800)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:EVR-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:EVR-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00001000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:stsRegFault1B13") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:stsRegFault1B13") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00002000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:stsRegFault1B14") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:stsRegFault1B14") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00004000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:stsRegFault1B15") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan3:stsRegFault1B15") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00008000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:ovc1-flt") }
+  
+#Faults Channel 4
+ 
+ record(calc, "$(PriSys){$(PSC)}Chan4:ovc1-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00010000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:ovc2-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:ovc2-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00020000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:ovv-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:ovv-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00040000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:error-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:error-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00080000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:glitch-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:glitch-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00100000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:gnd-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:gnd-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00200000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:dcctstatus-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:dcctstatus-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00400000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:Bipsummary-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:Bipsummary-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x00800000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:stsRegFault2B24") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:stsRegFault2B24") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x01000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:extintf-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:extintf-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x02000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:BipOn-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:BipOn-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x04000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:BipHeartbeat-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:BipHeartbeat-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x08000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:EVR-flt") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:EVR-flt") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x10000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:stsRegFault2B29") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:stsRegFault2B29") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x20000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:stsRegFault2B30") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:stsRegFault2B30") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x40000000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:stsRegFault2B31") }
+  
+  
+record(calc, "$(PriSys){$(PSC)}Chan4:stsRegFault2B31") {
+  field(INPA, "$(PriSys){$(PSC)}stsRegFault34")
+  field(CALC, "(A&0x80000000)?1:0")
+ }
+  
+
+  
+
+#Right after status position from ADC.db file position 136
+record(longin, "$(PriSys){$(PSC)}StatusWord")
+{
+  field(DESC, "State 0")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 136")
+  field(SCAN, "I/O Intr")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:Status0")
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1:Status0") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000001)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:Status1") }
+
+record(calc, "$(PriSys){$(PSC)}Chan1:Status1") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000002)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:Status2") }
+
+record(calc, "$(PriSys){$(PSC)}Chan1:Status2") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000004)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan1:Status3") }
+
+record(calc, "$(PriSys){$(PSC)}Chan1:Status3") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000008)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:Status0") }
+
+record(calc, "$(PriSys){$(PSC)}Chan2:Status0") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000010)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:Status1") }
+
+record(calc, "$(PriSys){$(PSC)}Chan2:Status1") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000020)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:Status2") }
+
+record(calc, "$(PriSys){$(PSC)}Chan2:Status2") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000040)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan2:Status3") }
+
+record(calc, "$(PriSys){$(PSC)}Chan2:Status3") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000080)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:Status0") }
+
+record(calc, "$(PriSys){$(PSC)}Chan3:Status0") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000100)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:Status1") }
+
+record(calc, "$(PriSys){$(PSC)}Chan3:Status1") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000200)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:Status2") }
+
+record(calc, "$(PriSys){$(PSC)}Chan3:Status2") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000400)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan3:Status3") }
+
+record(calc, "$(PriSys){$(PSC)}Chan3:Status3") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00000800)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:Status0") }
+
+record(calc, "$(PriSys){$(PSC)}Chan4:Status0") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00001000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:Status1") }
+
+record(calc, "$(PriSys){$(PSC)}Chan4:Status1") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00002000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:Status2") }
+
+record(calc, "$(PriSys){$(PSC)}Chan4:Status2") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00004000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}Chan4:Status3") }
+
+record(calc, "$(PriSys){$(PSC)}Chan4:Status3") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00008000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}StatusB16") }
+
+record(calc, "$(PriSys){$(PSC)}StatusB16") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00010000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}StatusB17") }
+
+record(calc, "$(PriSys){$(PSC)}StatusB17") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00020000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}StatusB18") }
+
+record(calc, "$(PriSys){$(PSC)}StatusB18") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00040000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}StatusB19") }
+
+record(calc, "$(PriSys){$(PSC)}StatusB19") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00080000)?1:0")
+  field(FLNK, "$(PriSys){$(PSC)}StatusB20") 
+}
+
+record(calc, "$(PriSys){$(PSC)}StatusB20") {
+  field(INPA, "$(PriSys){$(PSC)}StatusWord")
+  field(CALC, "(A&0x00100000)?1:0")
+}
+
+#NOTE: 
+#Status Packet positions 144 to 1100 are 
+#used in the BipPkt.substitutions file 
+#for the Bipolar Packet Data [4 Packets]
+
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp1")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1120")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp1")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp1")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp1")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp1 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp2")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1124")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp2")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp2")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp2")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp2 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp3")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1128")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp3")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp3")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp3 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp4")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1132")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp4")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp4")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp4")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp4 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp5")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1136")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp5")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp5")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp5")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp5 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp6")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1140")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp6")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp6")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp6")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp6 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp7")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1144")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp7")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp7")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp7")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp7 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp8")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1148")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp8")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp8")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp8")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp8 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp9")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1152")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp9")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp9")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp9")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp9 PP")    
+} 
+
+record(longin, "$(PriSys){$(PSC)}stsRegTemp10")
+{
+  field(DESC, "One Wire Temp Sensor")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1156")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}OWTemp10")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}OWTemp10")
+{
+        field(DESC, "OW Temp Calc")    
+        field(INPA, "$(PriSys){$(PSC)}stsRegTemp10")
+        field(CALC, "((25.06*A)/401)")          
+        field(OUT,  "$(PriSys){$(PSC)}OWTemp10 PP")   
+	field(FLNK, "$(PriSys){$(PSC)}TimeStampA")
+} 
+
+#EVR Time Stamps for all Four Circular Buffers
+
+record(longin, "$(PriSys){$(PSC)}TimeStampA")
+{
+  field(DESC, "Snapshot TimeStampA")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1160")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}TimeStampB")	
+}
+
+record(longin, "$(PriSys){$(PSC)}TimeStampB")
+{
+  field(DESC, "Snapshot TimeStampB")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1164")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}TimeStampC")	
+}
+
+record(longin, "$(PriSys){$(PSC)}TimeStampC")
+{
+  field(DESC, "Snapshot TimeStampC")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1168")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}TimeStampD")	
+}
+
+record(longin, "$(PriSys){$(PSC)}TimeStampD")
+{
+  field(DESC, "Snapshot TimeStampD")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1172")
+	field(SCAN, "I/O Intr")
+	#field(FLNK, "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE")	
+}
+
+#XADC Temperature
+record(longin, "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE_REG")
+{
+  field(DESC, "XADC Die Temperature")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1176")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE_REG")
+        field(CALC, "A/10")
+        field(OUT,  "$(PriSys){$(PSC)}XADC_DIE_TEMPERATURE PP") 
+        field(FLNK, "$(PriSys){$(PSC)}LIVE_TIMESTAMP")
+}
+
+#Live EVR Timestamp
+record(longin, "$(PriSys){$(PSC)}LIVE_TIMESTAMP")
+{
+  field(DESC, "EVR Live TimeStamp")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1180")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Snap_Trig1")	
+}
+
+#Snapshot Trigger 1
+record(longin, "$(PriSys){$(PSC)}Snap_Trig1")
+{
+  field(DESC, "Snapshot Trigger 1")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1184")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Snap_Trig2")	
+}
+
+#Snapshot Trigger 2
+record(longin, "$(PriSys){$(PSC)}Snap_Trig2")
+{
+  field(DESC, "Snapshot Trigger 2")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1188")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Snap_Trig3")	
+}
+
+#Snapshot Trigger 3
+record(longin, "$(PriSys){$(PSC)}Snap_Trig3")
+{
+  field(DESC, "Snapshot Trigger 3")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1192")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}Snap_Trig4")	
+}
+
+#Snapshot Trigger 4
+record(longin, "$(PriSys){$(PSC)}Snap_Trig4")
+{
+  field(DESC, "Snapshot Trigger 4")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1196")
+	field(SCAN, "I/O Intr")
+}
+
+#DAC 1 Count Readback
+record(longin, "$(PriSys){$(PSC):Chan1}sp_final")
+{
+  field(DESC, "DAC Counts")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1200")
+	field(SCAN, "I/O Intr")
+}
+
+#DAC 2 Count Readback
+record(longin, "$(PriSys){$(PSC):Chan2}sp_final")
+{
+  field(DESC, "DAC Counts")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1204")
+	field(SCAN, "I/O Intr")
+}
+
+#DAC 3 Count Readback
+record(longin, "$(PriSys){$(PSC):Chan3}sp_final")
+{
+  field(DESC, "DAC Counts")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1208")
+	field(SCAN, "I/O Intr")
+}
+
+#DAC 4 Count Readback
+record(longin, "$(PriSys){$(PSC):Chan4}sp_final")
+{
+  field(DESC, "DAC Counts")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1212")
+	field(SCAN, "I/O Intr")
+}
+
+#------------------------------------------------------
+#--Gains and Offset Readbacks
+#------------------------------------------------------
+
+record(longin, "$(PriSys){$(PSC):Chan1}dcct1_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1216")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}dcct2_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1220")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dcct1_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1224")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dcct2_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1228")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dcct1_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1232")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dcct2_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1236")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dcct1_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1240")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dcct2_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1244")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}dac_rdbck_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1248")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}volt_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1252")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}gnd_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1256")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}spare_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1260")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}reg_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1264")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}error_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1268")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dac_rdbck_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1272")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}volt_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1276")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}gnd_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1280")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}spare_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1284")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}reg_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1288")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}error_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1292")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dac_rdbck_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1296")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}volt_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1300")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}gnd_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1304")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}spare_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1308")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}reg_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1312")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}error_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1316")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dac_rdbck_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1320")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}volt_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1324")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}gnd_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1328")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}spare_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1332")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}reg_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1336")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}error_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1340")
+  field(SCAN, "I/O Intr")
+}
+#-------------------------------------------------------
+#----DAC Output Readback Gains-----
+#-------------------------------------------------------
+
+record(longin, "$(PriSys){$(PSC):Chan1}dac_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1344")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dac_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1348")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dac_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1352")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dac_gain_in")
+{
+  field(DESC, "Gain Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1356")
+  field(SCAN, "I/O Intr")
+}
+
+#---------------------------------------------------------
+#------------Offsets--------------------------------------
+#---------------------------------------------------------
+
+record(longin, "$(PriSys){$(PSC):Chan1}dcct1_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1360")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}dcct2_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1364")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dcct1_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1368")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dcct2_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1372")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dcct1_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1376")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dcct2_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1380")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dcct1_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1384")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dcct2_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1388")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}dac_rdbck_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1392")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}volt_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1396")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}gnd_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1400")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}spare_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1404")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}reg_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1408")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}error_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1412")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dac_rdbck_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1416")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}volt_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1420")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}gnd_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1424")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}spare_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1428")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}reg_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1432")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}error_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1436")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dac_rdbck_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1440")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}volt_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1444")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}gnd_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1448")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}spare_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1452")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}reg_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1456")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}error_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1460")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dac_rdbck_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1464")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}volt_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1468")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}gnd_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1472")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}spare_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1476")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}reg_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1480")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}error_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1484")
+  field(SCAN, "I/O Intr")
+}
+
+#---------------------------------------------------
+#---DAC Output Offsets
+#---------------------------------------------------
+
+record(longin, "$(PriSys){$(PSC):Chan1}dac_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1488")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}dac_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1492")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}dac_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1496")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}dac_offset_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1500")
+  field(SCAN, "I/O Intr")
+}
+
+#---------------------------------------------------------------
+#-------Interlocks Readbacks----------------
+#--------------------------------------------------------------
+
+record(longin, "$(PriSys){$(PSC):Chan1}OvcThresh1-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1504")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}OvvThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1508")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}RegConErr-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1512")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}RegConErrGlitchFlag-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1516")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}IgndThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1520")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan1}OvcThresh2-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1524")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}OvcThresh1-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1528")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}OvvThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1532")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}RegConErr-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1536")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}RegConErrGlitchFlag-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1540")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}IgndThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1544")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan2}OvcThresh2-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1548")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}OvcThresh1-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1552")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}OvvThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1556")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}RegConErr-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1560")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}RegConErrGlitchFlag-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1564")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}IgndThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1568")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan3}OvcThresh2-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1572")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}OvcThresh1-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1576")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}OvvThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1580")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}RegConErr-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1584")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}RegConErrGlitchFlag-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1588")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}IgndThresh-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1592")
+  field(SCAN, "I/O Intr")
+}
+
+record(longin, "$(PriSys){$(PSC):Chan4}OvcThresh2-sp_in")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1596")
+  field(SCAN, "I/O Intr")
+}
+
+# IP Address
+record(longin, "$(PriSys){$(PSC)}IP-I")
+{
+  field(DESC, "Offset Readback")
+  field(DTYP, "PSC Reg")
+  field(INP , "@StatusPort_$(PSC) 64 1600")
+  field(SCAN, "I/O Intr")
+}
+
+#RTOS Firmware Version
+record(longin, "$(PriSys){$(PSC)}RTOS_Version-calc")
+{
+  field(DESC, "RTOS Firmware Version")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1604")
+	field(SCAN, "I/O Intr")
+	field(FLNK,"$(PriSys){$(PSC)}RTOS_Version")
+}
+
+record(calcout, "$(PriSys){$(PSC)}RTOS_Version")
+{
+        field(DESC, "Div RTOS Version by 10")    
+        field(INPA, "$(PriSys){$(PSC)}RTOS_Version-calc")
+        field(CALC, "(A/10)")          
+        field(OUT,  "$(PriSys){$(PSC)}RTOS_Version PP")  
+} 
+
+#FPGA Firmware Version
+record(longin, "$(PriSys){$(PSC)}FPGA_Version-calc")
+{
+  field(DESC, "FPGA Firmware Version")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 1608")
+	field(SCAN, "I/O Intr")
+	field(FLNK, "$(PriSys){$(PSC)}FPGA_Version")
+}
+
+record(calcout, "$(PriSys){$(PSC)}FPGA_Version")
+{
+        field(DESC, "Div FPGA Version by 10")    
+        field(INPA, "$(PriSys){$(PSC)}FPGA_Version-calc")
+        field(CALC, "(A/10)")          
+        field(OUT,  "$(PriSys){$(PSC)}FPGA_Version PP")    
+} 
+
+
+
+#---------------------------------------------------------------
+#---Float Readbacks for Gains, Offset, and Interlocks-----------
+#---------------------------------------------------------------
+
+record(ai, "$(PriSys){$(PSC):Chan1}dcct1_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dcct2_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dcct1_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dcct2_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dcct1_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dcct2_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dcct1_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dcct2_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dac_rdbck_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}volt_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}gnd_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}spare_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}reg_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}error_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dac_rdbck_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}volt_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}gnd_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}spare_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}reg_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}error_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dac_rdbck_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}volt_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}gnd_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}spare_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}reg_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}error_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dac_rdbck_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}volt_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}gnd_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}spare_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}reg_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}error_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dac_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dac_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dac_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dac_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dcct1_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dcct2_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dcct1_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dcct2_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dcct1_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dcct2_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dcct1_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dcct2_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dac_rdbck_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}volt_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}gnd_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}spare_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}reg_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}error_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dac_rdbck_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}volt_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}gnd_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}spare_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}reg_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}error_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dac_rdbck_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}volt_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}gnd_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}spare_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}reg_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}error_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dac_rdbck_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}volt_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}gnd_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}spare_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}reg_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}error_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}dac_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}dac_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}dac_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dac_offset_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}OvcThresh1-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}OvcThresh2-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}OvvThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}RegConErr-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}RegConErrGlitchFlag-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan1}IgndThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}OvcThresh1-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}OvcThresh2-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}OvvThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}RegConErr-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}RegConErrGlitchFlag-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan2}IgndThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}OvcThresh1-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}OvcThresh2-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}OvvThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}RegConErr-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}RegConErrGlitchFlag-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan3}IgndThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}OvcThresh1-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}OvcThresh2-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}OvvThresh-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}RegConErr-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}dcct1_gain_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}RegConErrGlitchFlag-sp_in_qspi") {
+}
+
+record(ai, "$(PriSys){$(PSC):Chan4}IgndThresh-sp_in_qspi") {
+}
+
+record(stringout, "Chan1_seq_messages") {
+    field(DESC, "Message box from seq")
+}
+
+record(stringout, "Chan2_seq_messages") {
+    field(DESC, "Message box from seq")
+}
+
+record(stringout, "Chan3_seq_messages") {
+    field(DESC, "Message box from seq")
+}
+
+record(stringout, "Chan4_seq_messages") {
+    field(DESC, "Message box from seq")
+}
+
+record(mbbo,"$(PriSys){$(PSC)}Chan1:PsOnOff-Sts")
+{
+	field(ONST, "DONE")
+	field(ZRST, "Pls wait...") 
+	field(DESC, "PS Operation Mode Change")
+}
+
+record(mbbo,"$(PriSys){$(PSC)}Chan2:PsOnOff-Sts")
+{
+	field(ONST, "DONE")
+	field(ZRST, "Pls wait...") 
+	field(DESC, "PS Operation Mode Change")
+}
+
+record(mbbo,"$(PriSys){$(PSC)}Chan3:PsOnOff-Sts")
+{
+	field(ONST, "DONE")
+	field(ZRST, "Pls wait...") 
+	field(DESC, "PS Operation Mode Change")
+}
+
+record(mbbo,"$(PriSys){$(PSC)}Chan4:PsOnOff-Sts")
+{
+	field(ONST, "DONE")
+	field(ZRST, "Pls wait...") 
+	field(DESC, "PS Operation Mode Change")
+}
+
+
+
+
+
+

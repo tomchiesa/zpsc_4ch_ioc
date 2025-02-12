@@ -1,0 +1,8 @@
+file ADCWavefrom.template
+{pattern
+{MSG_ID,TRIG}
+{16,Trig1}
+{17,Trig2}
+{18,Trig3}
+{19,Trig4}
+}

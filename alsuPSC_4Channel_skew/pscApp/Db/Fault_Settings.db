@@ -1,0 +1,288 @@
+#-------------------------------------------------------------------------------
+# Over Current Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}OvcFaltLimitDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Over Current Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"6.5535")
+  field(LOPR,"0")
+  field(DRVH,"6.5535")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}OvcFaltLimitDec-sp_calcout")
+}
+record(calcout, "$(PriSys){$(PSC):Chan0}OvcFaltLimitDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}OvcFaltLimitDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}OvcFaltLimit-sp PP")
+}
+#-------------------------------------------------------------------------------
+# Over Voltage Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}OvvFaltLimitDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Over Voltage Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"6.5535")
+  field(LOPR,"0")
+  field(DRVH,"6.5535")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}OvvFaltLimitDec-sp_calcout")
+}
+record(calcout, "$(PriSys){$(PSC):Chan0}OvvFaltLimitDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}OvvFaltLimitDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}OvvFaltLimit-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Over Error Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}ErrFaltLimitDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Error Fault Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"6.5535")
+  field(LOPR,"0")
+  field(DRVH,"6.5535")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}ErrFaltLimitDec-sp_calcout")
+}
+record(calcout, "$(PriSys){$(PSC):Chan0}ErrFaltLimitDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}ErrFaltLimitDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}ErrFaltLimit-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Ground Current Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}IgndFaltChan0LimitDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Ground Current Fault Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"6.5535")
+  field(LOPR,"0")
+  field(DRVH,"6.5535")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}IgndFaltLimitDec-sp_calcout")
+}
+record(calcout, "$(PriSys){$(PSC):Chan0}IgndFaltLimitDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}IgndFaltLimitDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}IgndFaltLimit-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Generic Fault Time Limit (miliseconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}Flt123LimitDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Generic Fault Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"6.5535")
+  field(LOPR,"0")
+  field(DRVH,"65535")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}Flt123LimitDec-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}Flt123LimitDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}Flt123LimitDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}Flt123Limit-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Power Supply On Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}PsOnFltDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Generic Fault Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"42.94967295")
+  field(LOPR,"0")
+  field(DRVH,"42.94967295")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}PsOnFltDec-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}PsOnFltDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}PsOnFltDec-sp")
+  field(CALC,"floor(A*10000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}PsOnFlt-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Bipolar Supply HeartBeat Fault Time Limit (seconds)
+#-------------------------------------------------------------------------------
+record(ao, "$(PriSys){$(PSC):Chan0}PsHBFltDec-sp") {
+  info(autosaveFields, "VAL")
+  field(DESC, "Generic Fault Time Limit Input")
+  field(SCAN, "1 second")
+  field(HOPR,"42.94967295")
+  field(LOPR,"0")
+  field(DRVH,"42.94967295")
+  field(DRVL,"0")
+  field(OMSL, "closed_loop")
+  field(FLNK, "$(PriSys){$(PSC):Chan0}PsHBFltDec-sp_calcout")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}PsHBFltDec-sp_calcout") {
+  field(INPA,"$(PriSys){$(PSC):Chan0}PsHBFltDec-sp")
+  field(CALC,"floor(A*100000000)")   
+  field(OUT, "$(PriSys){$(PSC):Chan0}PsHBFlt-sp PP")
+}
+
+#-------------------------------------------------------------------------------
+# Fault Clear Channel Masking
+#-------------------------------------------------------------------------------
+
+#--------------------------------------
+#Channel 1 Clear Fault Mask
+#--------------------------------------
+record(bo, "$(PriSys){$(PSC)}FltClearChan1-bo") {
+    field(ZNAM, "LOW")  
+    field(ONAM, "HIGH") 
+    field(SCAN, "1 second")
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan1-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC)}FltClearChan1-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan1-bo")     
+    field(CALC, "(A==1)?(0x0000FFFF):0")                                              
+    field(OUT, "$(PriSys){$(PSC)}FltClearChan1-clear PP") 
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan2-bo")
+}
+ 
+#--------------------------------------
+#Channel 2 Clear Fault Mask 
+#--------------------------------------
+record(bo, "$(PriSys){$(PSC)}FltClearChan2-bo") {
+    field(ZNAM, "LOW")  
+    field(ONAM, "HIGH") 
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan2-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC)}FltClearChan2-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan2-bo")     
+    field(CALC, "(A==1)?(0xFFFF0000):0")             
+    #field(SCAN, "1 second")                               
+    field(OUT, "$(PriSys){$(PSC)}FltClearChan2-clear PP") 
+    field(FLNK,"$(PriSys){$(PSC):Chan0}FltClearChan12-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}FltClearChan12-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan1-clear") 
+    field(INPB, "$(PriSys){$(PSC)}FltClearChan2-clear")  
+    #field(SCAN, "1 second")    
+    field(CALC, "(A | B)")                                       
+    field(OUT, "$(PriSys){$(PSC):Chan0}FltClearChan12-clr PP") 
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan3-bo")
+}
+
+
+#--------------------------------------
+#Channel 3 Clear Fault Mask 
+#--------------------------------------
+record(bo, "$(PriSys){$(PSC)}FltClearChan3-bo") {
+    field(ZNAM, "LOW")  
+    field(ONAM, "HIGH") 
+    field(SCAN, "1 second")
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan3-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC)}FltClearChan3-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan3-bo")     
+    field(CALC, "(A==1)?(0x0000FFFF):0")                                              
+    field(OUT, "$(PriSys){$(PSC)}FltClearChan3-clear PP") 
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan4-bo")
+}
+
+#--------------------------------------
+#Channel 4 Clear Fault Mask 
+#--------------------------------------
+record(bo, "$(PriSys){$(PSC)}FltClearChan4-bo") {
+    field(ZNAM, "LOW")  
+    field(ONAM, "HIGH") 
+    field(FLNK, "$(PriSys){$(PSC)}FltClearChan4-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC)}FltClearChan4-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan4-bo")     
+    field(CALC, "(A==1)?(0xFFFF0000):0")             
+    #field(SCAN, "1 second")                               
+    field(OUT, "$(PriSys){$(PSC)}FltClearChan4-clear PP") 
+    field(FLNK,"$(PriSys){$(PSC):Chan0}FltClearChan34-clear")
+}
+
+record(calcout, "$(PriSys){$(PSC):Chan0}FltClearChan34-clear") {
+    field(INPA, "$(PriSys){$(PSC)}FltClearChan3-clear") 
+    field(INPB, "$(PriSys){$(PSC)}FltClearChan4-clear")  
+    #field(SCAN, "1 second")    
+    field(CALC, "(A | B)")                                       
+    field(OUT, "$(PriSys){$(PSC):Chan0}FltClearChan34-clr PP") 
+}
+
+#------------------------------------------------------------------------
+#Fault Enables 
+#------------------------------------------------------------------------
+#Channels 1 and 2
+record(calc, "$(PriSys){$(PSC):Chan0}FltEnableChan1") {
+   info(autosaveFields, "VAL")
+   field(SCAN, "1 second")
+   field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan1")
+   field(CALC, "A")
+  }
+
+record(calc, "$(PriSys){$(PSC):Chan0}FltEnableChan2") {
+   info(autosaveFields, "VAL")
+   field(SCAN, "1 second")
+   field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan2")
+   field(CALC, "A")
+  }
+  
+record(calcout, "$(PriSys){$(PSC):Chan0}FltClearChan12-calc") {
+    field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan1") 
+    field(INPB, "$(PriSys){$(PSC):Chan0}FltEnableChan2")  
+    field(SCAN, "1 second")    
+    field(CALC, "B<<16 | A")                                       
+    field(OUT, "$(PriSys){$(PSC):Chan0}FltEnableChan12-en PP") 
+}
+
+#Channels 3 and 4
+record(calc, "$(PriSys){$(PSC):Chan0}FltEnableChan3") {
+   info(autosaveFields, "VAL")
+   field(SCAN, "1 second")
+   field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan3")
+   field(CALC, "A")
+  }
+
+record(calc, "$(PriSys){$(PSC):Chan0}FltEnableChan4") {
+   info(autosaveFields, "VAL")
+   field(SCAN, "1 second")
+   field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan4")
+   field(CALC, "A")
+  }
+  
+record(calcout, "$(PriSys){$(PSC):Chan0}FltClearChan34-calc") {
+    field(INPA, "$(PriSys){$(PSC):Chan0}FltEnableChan3") 
+    field(INPB, "$(PriSys){$(PSC):Chan0}FltEnableChan4")  
+    field(SCAN, "1 second")    
+    field(CALC, "B<<16 | A")                                       
+    field(OUT, "$(PriSys){$(PSC):Chan0}FltEnableChan34-en PP") 
+}
+
+
+
+
+
+
+
+

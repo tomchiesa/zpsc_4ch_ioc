@@ -1,0 +1,1396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0.0">
+  <actions hook="false" hook_all="false" />
+  <auto_scale_widgets>
+    <auto_scale_widgets>true</auto_scale_widgets>
+    <min_width>-1</min_width>
+    <min_height>-1</min_height>
+  </auto_scale_widgets>
+  <auto_zoom_to_fit_all>true</auto_zoom_to_fit_all>
+  <background_color>
+    <color red="240" green="240" blue="240" />
+  </background_color>
+  <boy_version>5.1.0</boy_version>
+  <foreground_color>
+    <color red="192" green="192" blue="192" />
+  </foreground_color>
+  <grid_space>6</grid_space>
+  <height>900</height>
+  <macros>
+    <include_parent_macros>true</include_parent_macros>
+  </macros>
+  <name>Engineering_Page</name>
+  <rules />
+  <scripts />
+  <show_close_button>true</show_close_button>
+  <show_edit_range>false</show_edit_range>
+  <show_grid>true</show_grid>
+  <show_ruler>true</show_ruler>
+  <snap_to_geometry>true</snap_to_geometry>
+  <widget_type>Display</widget_type>
+  <width>1100</width>
+  <wuid>37410d70:174adf0382a:-7fff</wuid>
+  <x>-1</x>
+  <y>-1</y>
+  <widget typeId="org.csstudio.opibuilder.widgets.RoundedRectangle" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <alpha>255</alpha>
+    <anti_alias>true</anti_alias>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="224" green="255" blue="255" />
+    </background_color>
+    <bg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </bg_gradient_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="133" green="153" blue="210" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <corner_height>16</corner_height>
+    <corner_width>16</corner_width>
+    <enabled>true</enabled>
+    <fg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </fg_gradient_color>
+    <fill_level>0.0</fill_level>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="255" green="0" blue="0" />
+    </foreground_color>
+    <gradient>false</gradient>
+    <height>96</height>
+    <horizontal_fill>true</horizontal_fill>
+    <line_color>
+      <color red="0" green="0" blue="150" />
+    </line_color>
+    <line_style>0</line_style>
+    <line_width>3</line_width>
+    <name>Rounded Rectangle_1</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Rounded Rectangle</widget_type>
+    <width>919</width>
+    <wuid>66de60e3:1942d603507:-6d3c</wuid>
+    <x>12</x>
+    <y>402</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.RoundedRectangle" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <alarm_pulsing>false</alarm_pulsing>
+    <alpha>255</alpha>
+    <anti_alias>true</anti_alias>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="224" green="255" blue="255" />
+    </background_color>
+    <bg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </bg_gradient_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="133" green="153" blue="210" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <corner_height>16</corner_height>
+    <corner_width>16</corner_width>
+    <enabled>true</enabled>
+    <fg_gradient_color>
+      <color red="255" green="255" blue="255" />
+    </fg_gradient_color>
+    <fill_level>0.0</fill_level>
+    <font>
+      <opifont.name fontName="Ubuntu" height="11" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="255" green="0" blue="0" />
+    </foreground_color>
+    <gradient>false</gradient>
+    <height>353</height>
+    <horizontal_fill>true</horizontal_fill>
+    <line_color>
+      <color red="0" green="0" blue="150" />
+    </line_color>
+    <line_style>0</line_style>
+    <line_width>3</line_width>
+    <name>Rounded Rectangle_10</name>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <widget_type>Rounded Rectangle</widget_type>
+    <width>919</width>
+    <wuid>aa8d738:19427910318:-784d</wuid>
+    <x>12</x>
+    <y>30</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>24</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_66</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Snapshot Pages</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>244</width>
+    <wrap_words>false</wrap_words>
+    <wuid>37410d70:174adf0382a:-6517</wuid>
+    <x>330</x>
+    <y>42</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>Bipolar_Packet_Data.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <PSC>$(PSC)</PSC>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_4</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>UDP Packet Page</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>-215edaa0:1942a1681b2:-6fcc</wuid>
+    <x>120</x>
+    <y>444</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>EVR_Settings_Page.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <PSC>$(PSC)</PSC>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_5</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>EVR Settings</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>-215edaa0:1942a1681b2:-6fc4</wuid>
+    <x>348</x>
+    <y>444</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>Fault_Settings.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <PSC>$(PSC)</PSC>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_6</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Fault Settings</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>-215edaa0:1942a1681b2:-6fbc</wuid>
+    <x>588</x>
+    <y>444</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig2</TRIG>
+          <STAMP>A</STAMP>
+          <CHAN>Chan1</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_25</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Fault Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d53</wuid>
+    <x>24</x>
+    <y>197</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig1</TRIG>
+          <STAMP>A</STAMP>
+          <CHAN>Chan1</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>31</height>
+    <image></image>
+    <name>Action Button_26</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Manual Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d52</wuid>
+    <x>24</x>
+    <y>126</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig3</TRIG>
+          <STAMP>A</STAMP>
+          <CHAN>Chan1</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_27</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Loop Error Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d51</wuid>
+    <x>24</x>
+    <y>263</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig4</TRIG>
+          <STAMP>A</STAMP>
+          <CHAN>Chan1</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_28</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>EVR Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d50</wuid>
+    <x>24</x>
+    <y>328</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig2</TRIG>
+          <STAMP>B</STAMP>
+          <CHAN>Chan2</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_29</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Fault Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4f</wuid>
+    <x>257</x>
+    <y>197</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig1</TRIG>
+          <STAMP>B</STAMP>
+          <CHAN>Chan2</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>31</height>
+    <image></image>
+    <name>Action Button_30</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Manual Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4e</wuid>
+    <x>257</x>
+    <y>126</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig3</TRIG>
+          <STAMP>B</STAMP>
+          <CHAN>Chan2</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_31</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Loop Error Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4d</wuid>
+    <x>257</x>
+    <y>263</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig4</TRIG>
+          <STAMP>B</STAMP>
+          <CHAN>Chan2</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_32</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>EVR Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4c</wuid>
+    <x>257</x>
+    <y>328</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig2</TRIG>
+          <STAMP>C</STAMP>
+          <CHAN>Chan3</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_33</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Fault Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4b</wuid>
+    <x>486</x>
+    <y>197</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig1</TRIG>
+          <STAMP>C</STAMP>
+          <CHAN>Chan3</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>31</height>
+    <image></image>
+    <name>Action Button_34</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Manual Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d4a</wuid>
+    <x>486</x>
+    <y>126</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig3</TRIG>
+          <STAMP>C</STAMP>
+          <CHAN>Chan3</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_35</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Loop Error Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d49</wuid>
+    <x>486</x>
+    <y>263</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig4</TRIG>
+          <STAMP>C</STAMP>
+          <CHAN>Chan3</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_36</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>EVR Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d48</wuid>
+    <x>486</x>
+    <y>328</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig2</TRIG>
+          <STAMP>D</STAMP>
+          <CHAN>Chan4</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_37</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Fault Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d47</wuid>
+    <x>720</x>
+    <y>197</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig1</TRIG>
+          <STAMP>D</STAMP>
+          <CHAN>Chan4</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>31</height>
+    <image></image>
+    <name>Action Button_38</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Manual Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d46</wuid>
+    <x>720</x>
+    <y>126</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig3</TRIG>
+          <STAMP>D</STAMP>
+          <CHAN>Chan4</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_39</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>Loop Error Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d45</wuid>
+    <x>720</x>
+    <y>263</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>PSC_4Chan_Snap.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <TRIG>Trig4</TRIG>
+          <STAMP>D</STAMP>
+          <CHAN>Chan4</CHAN>
+        </macros>
+        <mode>0</mode>
+        <description></description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>2</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Sans" height="10" style="1" pixels="false">Header1</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>32</height>
+    <image></image>
+    <name>Action Button_40</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>1</style>
+    <text>EVR Snapshot</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>181</width>
+    <wuid>66de60e3:1942d603507:-6d44</wuid>
+    <x>720</x>
+    <y>328</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_1</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Engineering Pages</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>227</width>
+    <wrap_words>false</wrap_words>
+    <wuid>66de60e3:1942d603507:-6d34</wuid>
+    <x>330</x>
+    <y>414</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_2</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Channel 1</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>177</width>
+    <wrap_words>false</wrap_words>
+    <wuid>66de60e3:1942d603507:-6d2c</wuid>
+    <x>28</x>
+    <y>90</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_3</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Channel 2</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>177</width>
+    <wrap_words>false</wrap_words>
+    <wuid>66de60e3:1942d603507:-6d24</wuid>
+    <x>259</x>
+    <y>90</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_4</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Channel 3</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>177</width>
+    <wrap_words>false</wrap_words>
+    <wuid>66de60e3:1942d603507:-6d1c</wuid>
+    <x>486</x>
+    <y>90</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0.0">
+    <actions hook="false" hook_all="false" />
+    <auto_size>false</auto_size>
+    <background_color>
+      <color red="255" green="255" blue="255" />
+    </background_color>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Ubuntu" height="19" style="1" pixels="false">Header 1</opifont.name>
+    </font>
+    <foreground_color>
+      <color red="25" green="0" blue="255" />
+    </foreground_color>
+    <height>20</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <name>Label_5</name>
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <text>Channel 4</text>
+    <tooltip></tooltip>
+    <transparent>true</transparent>
+    <vertical_alignment>1</vertical_alignment>
+    <visible>true</visible>
+    <widget_type>Label</widget_type>
+    <width>177</width>
+    <wrap_words>false</wrap_words>
+    <wuid>66de60e3:1942d603507:-6d14</wuid>
+    <x>722</x>
+    <y>90</y>
+  </widget>
+</display>

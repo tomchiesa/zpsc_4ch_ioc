@@ -1,0 +1,218 @@
+file CommandReg.template
+{pattern
+{CHAN,RegIndex,RegName,LOPR,HOPR,SCAN}
+{1,0,Mode-cmd,0,65535,"2 second"}
+{1,4,Command-cmd,0,65535,Passive}
+{1,8,SpCount-sp,0,262143,Passive}
+{1,12,RampSteps-sp,10,2000000,Passive}
+{1,16,RampTableControl-cmd,0,262143,Passive}
+{1,20,Jump-Sp,0,262143,Passive}
+
+{1,24,OvcThresh1-sp_old,0,262143,"2 second"}
+{1,28,OvvThresh-sp_old,0,65535,"2 second"}
+{1,32,RegConErr-sp_old,0,262143,"2 second"}
+{1,36,RegConErrGlitchFlag-sp_old,0,262143,"2 second"}
+{1,40,IgndThresh-sp_old,0,65535,"2 second"}
+{0,44,AvgMode-sp,0,3,"2 second"} 
+{1,48,OvcThresh2-sp_old,0,262143,"2 second"}
+
+#Bipolar Packet 1
+{1,52,BipIP1Addr-sp,0,4294967295,"2 second"}
+{1,56,BipMAC1Hi-sp,0,4294967295,"2 second"}
+{1,60,BipMAC1Lo-sp,0,4294967295,"2 second"}
+
+
+{2,64,Mode-cmd,0,65535,"2 second"}
+{2,68,Command-cmd,0,65535,Passive}
+{2,72,SpCount-sp,0,262143,Passive}
+{2,76,RampSteps-sp,10,2000000,Passive}
+{2,80,RampTableControl-cmd,0,262143,Passive}
+{2,84,Jump-Sp,0,262143,Passive}
+
+{2,88,OvcThresh1-sp_old,0,262143,"2 second"}
+{2,92,OvvThresh-sp_old,0,65535,"2 second"}
+{2,96,RegConErr-sp_old,0,262143,"2 second"}
+{2,100,RegConErrGlitchFlag-s_oldp,0,262143,"2 second"}
+{2,104,IgndThresh-sp_old,0,65535,"2 second"}
+{2,108,AvgMode-sp,0,3,"2 second"}
+{2,112,OvcThresh2-sp_old,0,262143,"2 second"}
+
+#Bipolar Packet 2
+{2,116,BipIP2Addr-sp,0,4294967295,"2 second"}
+{2,120,BipMAC2Hi-sp,0,4294967295,"2 second"}
+{2,124,BipMAC2Lo-sp,0,4294967295,"2 second"}
+
+
+{3,128,Mode-cmd,0,65535,"2 second"}
+{3,132,Command-cmd,0,65535,Passive}
+{3,136,SpCount-sp,0,262143,Passive}
+{3,140,RampSteps-sp,10,2000000,Passive}
+{3,144,RampTableControl-cmd,0,262143,Passive}
+{3,148,Jump-Sp,0,262143,Passive}
+
+{3,152,OvcThresh1-sp_old,0,262143,"2 second"}
+{3,156,OvvThresh-sp_old,0,65535,"2 second"}
+{3,160,RegConErr-sp_old,0,262143,"2 second"}
+{3,164,RegConErrGlitchFlag-sp_old,0,262143,"2 second"}
+{3,168,IgndThresh-sp_old,0,65535,"2 second"}
+{3,172,AvgMode-sp,0,3,"2 second"}
+{3,176,OvcThresh2-sp_old,0,262143,"2 second"}
+
+#Bipolar Packet 3
+{3,180,BipIP3Addr-sp,0,4294967295,"2 second"}
+{3,184,BipMAC3Hi-sp,0,4294967295,"2 second"}
+{3,188,BipMAC3Lo-sp,0,4294967295,"2 second"}
+
+{4,192,Mode-cmd,0,65535,"2 second"}
+{4,196,Command-cmd,0,65535,Passive}
+{4,200,SpCount-sp,0,262143,Passive}
+{4,204,RampSteps-sp,10,2000000,Passive}
+{4,208,RampTableControl-cmd,0,262143,Passive}
+{4,212,Jump-Sp,0,262143,Passive}
+
+{4,216,OvcThresh1-sp_old,0,262143,"2 second"}
+{4,220,OvvThresh-sp_old,0,65535,"2 second"}
+{4,224,RegConErr-sp_old,0,262143,"2 second"}
+{4,228,RegConErrGlitchFlag-sp_old,0,262143,"2 second"}
+{4,232,IgndThresh-sp_old,0,65535,"2 second"}
+{4,236,AvgMode-sp,0,3,"2 second"}
+{4,240,OvcThresh2-sp_old,0,262143,"2 second"}
+
+#Bipolar Packet 4
+{4,244,BipIP4Addr-sp,0,4294967295,"2 second"}
+{4,248,BipMAC4Hi-sp,0,4294967295,"2 second"}
+{4,252,BipMAC4Lo-sp,0,4294967295,"2 second"}
+
+
+
+#CmdCommon
+#Fault Registers i.e. CmdCommon[0-10]
+{0,256,OvcFaltLimit-sp,0,65535,"2 second"}
+{0,260,OvvFaltLimit-sp,0,65535,"2 second"}
+{0,264,ErrFaltLimit-sp,0,65535,"2 second"}
+{0,268,IgndFaltLimit-sp,0,65535,"2 second"}
+{0,272,Flt123Limit-sp,0,65535,"2 second"}
+{0,276,PsOnFlt-sp,0,4294967295,"2 second"}
+{0,280,PsHBFlt-sp,0,4294967295,"2 second"}
+{0,284,FltEnableChan12-en,0,4294967295,"2 second"}
+{0,288,FltEnableChan34-en,0,4294967295,"2 second"}
+{0,292,FltClearChan12-clr,0,4294967295,"2 second"}
+{0,296,FltClearChan34-clr,0,4294967295,"2 second"}
+
+#Si570 EVR xtal frequency i.e. CmdCommon[11]
+{0,300,EVRFreq,0,4294967295,"5 second"}
+
+#EVR Freq Codes
+{0,304,EVRFreqCodes,0,4294967295,"5 second"}
+#EVR Freq Codes
+{0,308,EVRTrigCodes,0,4294967295,"5 second"}
+
+#NOTE:
+#cmdCommon2 and cmdCommon3 are used 
+#in CommandRegBip.substitution file 
+#Covering register positions 328 to 412
+
+#cmdCommon4
+{1,448,dcct1_gain ,0,4294967295,"5 second"}
+{1,452,dcct2_gain ,0,4294967295,"5 second"}
+{2,456,dcct1_gain ,0,4294967295,"5 second"}
+{2,460,dcct2_gain ,0,4294967295,"5 second"}
+{3,464,dcct1_gain ,0,4294967295,"5 second"}
+{3,468,dcct2_gain ,0,4294967295,"5 second"}
+{4,472,dcct1_gain ,0,4294967295,"5 second"}
+{4,476,dcct2_gain ,0,4294967295,"5 second"}
+{1,480,dac_rdbck_gain ,0,4294967295,"5 second"}
+{1,484,volt_gain    ,0,4294967295,"5 second"}
+{1,488,gnd_gain    ,0,4294967295,"5 second"}
+{1,492,spare_gain ,0,4294967295,"5 second"}
+{1,496,reg_gain     ,0,4294967295,"5 second"}
+{1,500,error_gain   ,0,4294967295,"5 second"}
+{2,504,dac_rdbck_gain  ,0,4294967295,"5 second"}
+{2,508,volt_gain    ,0,4294967295,"5 second"}
+{2,512,gnd_gain    ,0,4294967295,"5 second"}
+{2,516,spare_gain ,0,4294967295,"5 second"}
+{2,520,reg_gain     ,0,4294967295,"5 second"}
+{2,524,error_gain   ,0,4294967295,"5 second"}
+{3,528,dac_rdbck_gain  ,0,4294967295,"5 second"}
+{3,532,volt_gain    ,0,4294967295,"5 second"}
+{3,536,gnd_gain    ,0,4294967295,"5 second"}
+{3,540,spare_gain ,0,4294967295,"5 second"}
+{3,544,reg_gain     ,0,4294967295,"5 second"}
+{3,548,error_gain   ,0,4294967295,"5 second"}
+{4,552,dac_rdbck_gain  ,0,4294967295,"5 second"}
+{4,556,volt_gain    ,0,4294967295,"5 second"}
+{4,560,gnd_gain    ,0,4294967295,"5 second"}
+{4,564,spare_gain ,0,4294967295,"5 second"}
+{4,568,reg_gain     ,0,4294967295,"5 second"}
+{4,572,error_gain   ,0,4294967295,"5 second"}
+{1,576,dac_gain    ,0,4294967295,"5 second"}
+{2,580,dac_gain    ,0,4294967295,"5 second"}
+{3,584,dac_gain    ,0,4294967295,"5 second"}
+{4,588,dac_gain    ,0,4294967295,"5 second"}
+{1,592,dcct1_offset ,0,4294967295,"5 second"}
+{1,596,dcct2_offset ,0,4294967295,"5 second"}
+{2,600,dcct1_offset ,0,4294967295,"5 second"}
+{2,604,dcct2_offset ,0,4294967295,"5 second"}
+{3,608,dcct1_offset ,0,4294967295,"5 second"}
+{3,612,dcct2_offset ,0,4294967295,"5 second"}
+{4,616,dcct1_offset ,0,4294967295,"5 second"}
+{4,620,dcct2_offset ,0,4294967295,"5 second"}
+{1,624,dac_rdbck_offset ,0,4294967295,"5 second"}
+{1,628,volt_offset  ,0,4294967295,"5 second"}
+{1,632,gnd_offset  ,0,4294967295,"5 second"}
+{1,636,spare_offset ,0,4294967295,"5 second"}
+{1,640,reg_offset   ,0,4294967295,"5 second"}
+{1,644,error_offset ,0,4294967295,"5 second"}
+{2,648,dac_rdbck_offset ,0,4294967295,"5 second"}
+{2,652,volt_offset  ,0,4294967295,"5 second"}
+{2,656,gnd_offset  ,0,4294967295,"5 second"}
+{2,660,spare_offset  ,0,4294967295,"5 second"}
+{2,664,reg_offset   ,0,4294967295,"5 second"}
+{2,668,error_offset ,0,4294967295,"5 second"}
+{3,672,dac_rdbck_offset ,0,4294967295,"5 second"}
+{3,676,volt_offset  ,0,4294967295,"5 second"}
+{3,680,gnd_offset  ,0,4294967295,"5 second"}
+{3,684,spare_offset ,0,4294967295,"5 second"}
+{3,688,reg_offset   ,0,4294967295,"5 second"}
+{3,692,error_offset ,0,4294967295,"5 second"}
+{4,696,dac_rdbck_offset ,0,4294967295,"5 second"}
+{4,700,volt_offset  ,0,4294967295,"5 second"}
+{4,704,gnd_offset  ,0,4294967295,"5 second"}
+{4,708,spare_offset   ,0,4294967295,"5 second"}
+{4,712,reg_offset   ,0,4294967295,"5 second"}
+{4,716,error_offset ,0,4294967295,"5 second"}
+{1,720,dac_offset  ,0,4294967295,"5 second"}
+{2,724,dac_offset  ,0,4294967295,"5 second"}
+{3,728,dac_offset  ,0,4294967295,"5 second"}
+{4,732,dac_offset  ,0,4294967295,"5 second"}
+{0,736, write_cal_data   ,0,4294967295,"5 second"}
+
+#Interlock Limits
+{1,740,OvcThresh1-sp,0,1048575,"2 second"}
+{1,744,OvvThresh-sp,0,1048575,"2 second"}
+{1,748,RegConErr-sp,0,65535,"2 second"}
+{1,752,RegConErrGlitchFlag-sp,0,1048575,"2 second"}
+{1,756,IgndThresh-sp,0,1048575,"2 second"}
+{1,760,OvcThresh2-sp,0,65535,"2 second"}
+
+{2,764,OvcThresh1-sp,0,1048575,"2 second"}
+{2,768,OvvThresh-sp,0,1048575,"2 second"}
+{2,772,RegConErr-sp,0,65535,"2 second"}
+{2,776,RegConErrGlitchFlag-sp,0,1048575,"2 second"}
+{2,780,IgndThresh-sp,0,1048575,"2 second"}
+{2,784,OvcThresh2-sp,0,65535,"2 second"}
+
+{3,788,OvcThresh1-sp,0,1048575,"2 second"}
+{3,792,OvvThresh-sp,0,1048575,"2 second"}
+{3,796,RegConErr-sp,0,65535,"2 second"}
+{3,800,RegConErrGlitchFlag-sp,0,1048575,"2 second"}
+{3,804,IgndThresh-sp,0,1048575,"2 second"}
+{3,808,OvcThresh2-sp,0,65535,"2 second"}
+
+{4,812,OvcThresh1-sp,0,1048575,"2 second"}
+{4,816,OvvThresh-sp,0,1048575,"2 second"}
+{4,820,RegConErr-sp,0,65535,"2 second"}
+{4,824,RegConErrGlitchFlag-sp,0,1048575,"2 second"}
+{4,828,IgndThresh-sp,0,1048575,"2 second"}
+{4,832,OvcThresh2-sp,0,65535,"2 second"}
+}    

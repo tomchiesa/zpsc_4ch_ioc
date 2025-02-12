@@ -1,0 +1,40 @@
+record(bo, "$(PriSys){$(PSC)}Send-Cmd") {
+  field(DTYP, "PSC Ctrl Send All")
+  field(DESC, "Send pending to PSC")
+  field(OUT , "@RampTablePort_$(PSC)")
+  field(ZNAM, "Send")
+  field(ONAM, "Send")
+}
+
+record(waveform, "$(PriSys){$(PSC):chan1}wfout-SP") {
+  field(DTYP, "PSC Block I32 Out")
+  field(INP , "@RampTablePort_$(PSC) $(msgid1)")
+  field(SCAN, "10 second")
+  field(FTVL, "DOUBLE")
+  field(NELM, "$(RT_LENGTH)")
+  field(FLNK, "$(PriSys){$(PSC):chan2}wfout-SP")
+}
+
+record(waveform, "$(PriSys){$(PSC):chan2}wfout-SP") {
+  field(DTYP, "PSC Block I32 Out")
+  field(INP , "@RampTablePort_$(PSC) $(msgid2)")
+  field(FTVL, "DOUBLE")
+  field(NELM, "$(RT_LENGTH)")
+  field(FLNK, "$(PriSys){$(PSC):chan3}wfout-SP")
+}
+
+record(waveform, "$(PriSys){$(PSC):chan3}wfout-SP") {
+  field(DTYP, "PSC Block I32 Out")
+  field(INP , "@RampTablePort_$(PSC) $(msgid3)")
+  field(FTVL, "DOUBLE")
+  field(NELM, "$(RT_LENGTH)")
+  field(FLNK, "$(PriSys){$(PSC):chan4}wfout-SP")
+}
+
+record(waveform, "$(PriSys){$(PSC):chan4}wfout-SP") {
+  field(DTYP, "PSC Block I32 Out")
+  field(INP , "@RampTablePort_$(PSC) $(msgid4)")
+  field(FTVL, "DOUBLE")
+  field(NELM, "$(RT_LENGTH)")
+  field(FLNK, "$(PriSys){$(PSC)}Send-Cmd")
+}

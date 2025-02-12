@@ -1,0 +1,768 @@
+record(bo, "$(PriSys){$(PSC)}Chan1:On1-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan1:On2-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan1:On3-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan1:Spare-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan2:On1-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan2:On2-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan2:On3-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan2:Spare-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan3:On1-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan3:On2-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan3:On3-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan3:Spare-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan4:On1-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan4:On2-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan4:On3-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan4:Spare-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan1:Park-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan2:Park-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan3:Park-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}Chan4:Park-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B20-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B21-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B22-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B23-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B24-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B25-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B26-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B27-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B28-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B29-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B30-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+record(bo, "$(PriSys){$(PSC)}B31-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan1}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan2}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan3}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}
+
+record(bo, "$(PriSys){$(PSC):Chan4}On-Cmd") {
+    field(ZNAM, "LOW")
+    field(ONAM, "HIGH")  
+}

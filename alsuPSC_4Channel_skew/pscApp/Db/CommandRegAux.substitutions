@@ -1,0 +1,8 @@
+file CommandRegAux.template
+{pattern
+{CHAN,SCAN,HOPR_SP,LOPR_SP,HOPR_IMPD,LOPR_IMPD,HOPR_RampRate,LOPR_RampRate,CNTSec,SpRegName,StepsRegName}
+{1,"1 second",11.9,-11.9,10.001,0.200,30.001,0.0,10000,"SpCount-sp","RampSteps-sp"}
+{2,"1 second",11.9,-11.9,10.001,0.200,30.001,0.0,10000,"SpCount-sp","RampSteps-sp"}
+{3,"1 second",11.9,-11.9,10.001,0.200,30.001,0.0,10000,"SpCount-sp","RampSteps-sp"}
+{4,"1 second",11.9,-11.9,10.001,0.200,30.001,0.0,10000,"SpCount-sp","RampSteps-sp"}
+}

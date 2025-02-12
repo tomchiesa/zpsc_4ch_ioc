@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH","linux-x86")
+epicsEnvSet("IOC","iocBooster")
+epicsEnvSet("TOP","/direct/psioc/ps-br-test80")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

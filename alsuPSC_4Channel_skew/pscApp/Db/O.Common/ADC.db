@@ -1,0 +1,3104 @@
+record(longin, "$(PriSys){$(PSC)}stsReg0")
+{
+        field(DESC, "Staus register:0")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 0")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc1")
+{
+        field(DESC, "dcct1ADC:Chan1 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg0")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc2")
+{
+        field(DESC, "dcct1ADC:Chan1 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc3")
+{
+        field(DESC, "dcct1ADC:Chan1 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan1 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct1ADC:Chan1")
+{
+        field(DESC, "ADC Readback:dcct1ADC:Chan1")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct1ADC:Chan1 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan1-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan1-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg1")
+{
+        field(DESC, "Staus register:1")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 4")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc1")
+{
+        field(DESC, "dcct2ADC:Chan1 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg1")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc2")
+{
+        field(DESC, "dcct2ADC:Chan1 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc3")
+{
+        field(DESC, "dcct2ADC:Chan1 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan1 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct2ADC:Chan1")
+{
+        field(DESC, "ADC Readback:dcct2ADC:Chan1")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct2ADC:Chan1 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan1-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan1-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg2")
+{
+        field(DESC, "Staus register:2")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 8")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc1")
+{
+        field(DESC, "dcct1ADC:Chan2 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg2")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc2")
+{
+        field(DESC, "dcct1ADC:Chan2 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc3")
+{
+        field(DESC, "dcct1ADC:Chan2 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan2 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct1ADC:Chan2")
+{
+        field(DESC, "ADC Readback:dcct1ADC:Chan2")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct1ADC:Chan2 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan2-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan2-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg3")
+{
+        field(DESC, "Staus register:3")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 12")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc1")
+{
+        field(DESC, "dcct2ADC:Chan2 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg3")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc2")
+{
+        field(DESC, "dcct2ADC:Chan2 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc3")
+{
+        field(DESC, "dcct2ADC:Chan2 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan2 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct2ADC:Chan2")
+{
+        field(DESC, "ADC Readback:dcct2ADC:Chan2")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct2ADC:Chan2 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan2-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan2-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg4")
+{
+        field(DESC, "Staus register:4")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 16")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc1")
+{
+        field(DESC, "dcct1ADC:Chan3 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg4")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc2")
+{
+        field(DESC, "dcct1ADC:Chan3 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc3")
+{
+        field(DESC, "dcct1ADC:Chan3 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan3 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct1ADC:Chan3")
+{
+        field(DESC, "ADC Readback:dcct1ADC:Chan3")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct1ADC:Chan3 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan3-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan3-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg5")
+{
+        field(DESC, "Staus register:5")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 20")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc1")
+{
+        field(DESC, "dcct2ADC:Chan3 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg5")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc2")
+{
+        field(DESC, "dcct2ADC:Chan3 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc3")
+{
+        field(DESC, "dcct2ADC:Chan3 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan3 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct2ADC:Chan3")
+{
+        field(DESC, "ADC Readback:dcct2ADC:Chan3")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct2ADC:Chan3 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan3-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan3-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg6")
+{
+        field(DESC, "Staus register:6")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 24")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc1")
+{
+        field(DESC, "dcct1ADC:Chan4 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg6")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc2")
+{
+        field(DESC, "dcct1ADC:Chan4 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc3")
+{
+        field(DESC, "dcct1ADC:Chan4 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan4 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct1ADC:Chan4")
+{
+        field(DESC, "ADC Readback:dcct1ADC:Chan4")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct1ADC:Chan4 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan4-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan4-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg7")
+{
+        field(DESC, "Staus register:7")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 28")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc1")
+{
+        field(DESC, "dcct2ADC:Chan4 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg7")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc2")
+{
+        field(DESC, "dcct2ADC:Chan4 Average")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc3")
+{
+        field(DESC, "dcct2ADC:Chan4 Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Gain")
+        field(INPC, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Impd")
+        field(INPD, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Ofst")
+
+        field(CALC, "((1==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan4 PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}dcct2ADC:Chan4")
+{
+        field(DESC, "ADC Readback:dcct2ADC:Chan4")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:dcct2ADC:Chan4 Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan4-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan4-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg8")
+{
+        field(DESC, "Staus register:8")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 32")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc1")
+{
+        field(DESC, "Chan1-DAC-SP 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg8")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc2")
+{
+        field(DESC, "Chan1-DAC-SP Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc3")
+{
+        field(DESC, "Chan1-DAC-SP Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-DAC-SP-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-DAC-SP-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-DAC-SP-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-DAC-SP-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-DAC-SP PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-DAC-SP")
+{
+        field(DESC, "ADC Readback:Chan1-DAC-SP")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-DAC-SP-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-DAC-SP Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-DAC-SP-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-DAC-SP-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-DAC-SP-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-DAC-SP-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-DAC-SP-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-DAC-SP-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-DAC-SP-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-DAC-SP-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-DAC-SP-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg9")
+{
+        field(DESC, "Staus register:9")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 36")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc1")
+{
+        field(DESC, "Chan1-VOLT-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg9")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc2")
+{
+        field(DESC, "Chan1-VOLT-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc3")
+{
+        field(DESC, "Chan1-VOLT-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-VOLT-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-VOLT-Mon")
+{
+        field(DESC, "ADC Readback:Chan1-VOLT-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-VOLT-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg10")
+{
+        field(DESC, "Staus register:10")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 40")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc1")
+{
+        field(DESC, "Chan1-GND-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg10")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc2")
+{
+        field(DESC, "Chan1-GND-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc3")
+{
+        field(DESC, "Chan1-GND-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-GND-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-GND-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-GND-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-GND-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-GND-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-GND-Mon")
+{
+        field(DESC, "ADC Readback:Chan1-GND-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-GND-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-GND-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-GND-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-GND-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-GND-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-GND-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-GND-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-GND-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-GND-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-GND-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-GND-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg11")
+{
+        field(DESC, "Staus register:11")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 44")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc1")
+{
+        field(DESC, "Chan1-Spare-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg11")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc2")
+{
+        field(DESC, "Chan1-Spare-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc3")
+{
+        field(DESC, "Chan1-Spare-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-Spare-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-Spare-Mon")
+{
+        field(DESC, "ADC Readback:Chan1-Spare-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-Spare-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-Spare-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-Spare-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-Spare-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-Spare-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-Spare-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-Spare-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg12")
+{
+        field(DESC, "Staus register:12")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 48")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc1")
+{
+        field(DESC, "Chan1-PS-Reg-Out 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg12")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc2")
+{
+        field(DESC, "Chan1-PS-Reg-Out Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc3")
+{
+        field(DESC, "Chan1-PS-Reg-Out Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Reg-Out PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out")
+{
+        field(DESC, "ADC Readback:Chan1-PS-Reg-Out")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-PS-Reg-Out Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Reg-Out-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg13")
+{
+        field(DESC, "Staus register:13")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 52")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc1")
+{
+        field(DESC, "Chan1-PS-Err 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg13")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc2")
+{
+        field(DESC, "Chan1-PS-Err Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc3")
+{
+        field(DESC, "Chan1-PS-Err Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Err-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan1-PS-Err-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan1-PS-Err-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan1-PS-Err-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Err PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan1-PS-Err")
+{
+        field(DESC, "ADC Readback:Chan1-PS-Err")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Err-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan1-PS-Err Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Err-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Err-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Err-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Err-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan1-PS-Err-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan1-PS-Err-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan1-PS-Err-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan1-PS-Err-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan1-PS-Err-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg14")
+{
+        field(DESC, "Staus register:14")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 56")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc1")
+{
+        field(DESC, "Chan2-DAC-SP 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg14")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc2")
+{
+        field(DESC, "Chan2-DAC-SP Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc3")
+{
+        field(DESC, "Chan2-DAC-SP Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-DAC-SP-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-DAC-SP-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-DAC-SP-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-DAC-SP-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-DAC-SP PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-DAC-SP")
+{
+        field(DESC, "ADC Readback:Chan2-DAC-SP")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-DAC-SP-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-DAC-SP Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-DAC-SP-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-DAC-SP-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-DAC-SP-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-DAC-SP-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-DAC-SP-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-DAC-SP-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-DAC-SP-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-DAC-SP-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-DAC-SP-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg15")
+{
+        field(DESC, "Staus register:15")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 60")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc1")
+{
+        field(DESC, "Chan2-VOLT-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg15")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc2")
+{
+        field(DESC, "Chan2-VOLT-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc3")
+{
+        field(DESC, "Chan2-VOLT-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-VOLT-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-VOLT-Mon")
+{
+        field(DESC, "ADC Readback:Chan2-VOLT-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-VOLT-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg16")
+{
+        field(DESC, "Staus register:16")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 64")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc1")
+{
+        field(DESC, "Chan2-GND-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg16")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc2")
+{
+        field(DESC, "Chan2-GND-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc3")
+{
+        field(DESC, "Chan2-GND-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-GND-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-GND-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-GND-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-GND-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-GND-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-GND-Mon")
+{
+        field(DESC, "ADC Readback:Chan2-GND-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-GND-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-GND-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-GND-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-GND-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-GND-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-GND-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-GND-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-GND-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-GND-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-GND-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-GND-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg17")
+{
+        field(DESC, "Staus register:17")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 68")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc1")
+{
+        field(DESC, "Chan2-Spare-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg17")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc2")
+{
+        field(DESC, "Chan2-Spare-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc3")
+{
+        field(DESC, "Chan2-Spare-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-Spare-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-Spare-Mon")
+{
+        field(DESC, "ADC Readback:Chan2-Spare-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-Spare-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-Spare-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-Spare-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-Spare-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-Spare-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-Spare-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-Spare-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg18")
+{
+        field(DESC, "Staus register:18")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 72")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc1")
+{
+        field(DESC, "Chan2-PS-Reg-Out 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg18")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc2")
+{
+        field(DESC, "Chan2-PS-Reg-Out Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc3")
+{
+        field(DESC, "Chan2-PS-Reg-Out Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Reg-Out PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out")
+{
+        field(DESC, "ADC Readback:Chan2-PS-Reg-Out")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-PS-Reg-Out Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Reg-Out-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg19")
+{
+        field(DESC, "Staus register:19")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 76")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc1")
+{
+        field(DESC, "Chan2-PS-Err 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg19")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc2")
+{
+        field(DESC, "Chan2-PS-Err Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc3")
+{
+        field(DESC, "Chan2-PS-Err Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Err-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan2-PS-Err-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan2-PS-Err-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan2-PS-Err-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Err PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan2-PS-Err")
+{
+        field(DESC, "ADC Readback:Chan2-PS-Err")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Err-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan2-PS-Err Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Err-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Err-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Err-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Err-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan2-PS-Err-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan2-PS-Err-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan2-PS-Err-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan2-PS-Err-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan2-PS-Err-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg20")
+{
+        field(DESC, "Staus register:20")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 80")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc1")
+{
+        field(DESC, "Chan3-DAC-SP 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg20")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc2")
+{
+        field(DESC, "Chan3-DAC-SP Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc3")
+{
+        field(DESC, "Chan3-DAC-SP Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-DAC-SP-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-DAC-SP-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-DAC-SP-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-DAC-SP-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-DAC-SP PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-DAC-SP")
+{
+        field(DESC, "ADC Readback:Chan3-DAC-SP")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-DAC-SP-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-DAC-SP Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-DAC-SP-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-DAC-SP-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-DAC-SP-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-DAC-SP-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-DAC-SP-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-DAC-SP-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-DAC-SP-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-DAC-SP-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-DAC-SP-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg21")
+{
+        field(DESC, "Staus register:21")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 84")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc1")
+{
+        field(DESC, "Chan3-VOLT-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg21")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc2")
+{
+        field(DESC, "Chan3-VOLT-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc3")
+{
+        field(DESC, "Chan3-VOLT-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-VOLT-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-VOLT-Mon")
+{
+        field(DESC, "ADC Readback:Chan3-VOLT-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-VOLT-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg22")
+{
+        field(DESC, "Staus register:22")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 88")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc1")
+{
+        field(DESC, "Chan3-GND-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg22")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc2")
+{
+        field(DESC, "Chan3-GND-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc3")
+{
+        field(DESC, "Chan3-GND-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-GND-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-GND-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-GND-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-GND-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-GND-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-GND-Mon")
+{
+        field(DESC, "ADC Readback:Chan3-GND-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-GND-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-GND-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-GND-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-GND-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-GND-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-GND-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-GND-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-GND-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-GND-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-GND-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-GND-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg23")
+{
+        field(DESC, "Staus register:23")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 92")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc1")
+{
+        field(DESC, "Chan3-Spare-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg23")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc2")
+{
+        field(DESC, "Chan3-Spare-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc3")
+{
+        field(DESC, "Chan3-Spare-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-Spare-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-Spare-Mon")
+{
+        field(DESC, "ADC Readback:Chan3-Spare-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-Spare-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-Spare-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-Spare-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-Spare-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-Spare-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-Spare-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-Spare-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg24")
+{
+        field(DESC, "Staus register:24")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 96")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc1")
+{
+        field(DESC, "Chan3-PS-Reg-Out 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg24")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc2")
+{
+        field(DESC, "Chan3-PS-Reg-Out Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc3")
+{
+        field(DESC, "Chan3-PS-Reg-Out Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Reg-Out PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out")
+{
+        field(DESC, "ADC Readback:Chan3-PS-Reg-Out")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-PS-Reg-Out Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Reg-Out-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg25")
+{
+        field(DESC, "Staus register:25")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 100")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc1")
+{
+        field(DESC, "Chan3-PS-Err 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg25")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc2")
+{
+        field(DESC, "Chan3-PS-Err Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc3")
+{
+        field(DESC, "Chan3-PS-Err Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Err-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan3-PS-Err-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan3-PS-Err-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan3-PS-Err-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Err PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan3-PS-Err")
+{
+        field(DESC, "ADC Readback:Chan3-PS-Err")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Err-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan3-PS-Err Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Err-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Err-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Err-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Err-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan3-PS-Err-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan3-PS-Err-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan3-PS-Err-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan3-PS-Err-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan3-PS-Err-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg26")
+{
+        field(DESC, "Staus register:26")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 104")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc1")
+{
+        field(DESC, "Chan4-DAC-SP 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg26")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc2")
+{
+        field(DESC, "Chan4-DAC-SP Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc3")
+{
+        field(DESC, "Chan4-DAC-SP Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-DAC-SP-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-DAC-SP-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-DAC-SP-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-DAC-SP-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-DAC-SP PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-DAC-SP")
+{
+        field(DESC, "ADC Readback:Chan4-DAC-SP")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-DAC-SP-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-DAC-SP Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-DAC-SP-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-DAC-SP-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-DAC-SP-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-DAC-SP-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-DAC-SP-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-DAC-SP-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-DAC-SP-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-DAC-SP-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-DAC-SP-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg27")
+{
+        field(DESC, "Staus register:27")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 108")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc1")
+{
+        field(DESC, "Chan4-VOLT-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg27")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc2")
+{
+        field(DESC, "Chan4-VOLT-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc3")
+{
+        field(DESC, "Chan4-VOLT-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-VOLT-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-VOLT-Mon")
+{
+        field(DESC, "ADC Readback:Chan4-VOLT-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-VOLT-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg28")
+{
+        field(DESC, "Staus register:28")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 112")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc1")
+{
+        field(DESC, "Chan4-GND-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg28")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc2")
+{
+        field(DESC, "Chan4-GND-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc3")
+{
+        field(DESC, "Chan4-GND-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-GND-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-GND-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-GND-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-GND-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-GND-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-GND-Mon")
+{
+        field(DESC, "ADC Readback:Chan4-GND-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-GND-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-GND-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-GND-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-GND-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-GND-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-GND-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-GND-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-GND-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-GND-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-GND-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-GND-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg29")
+{
+        field(DESC, "Staus register:29")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 116")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc1")
+{
+        field(DESC, "Chan4-Spare-Mon 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg29")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc2")
+{
+        field(DESC, "Chan4-Spare-Mon Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc3")
+{
+        field(DESC, "Chan4-Spare-Mon Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-Spare-Mon PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-Spare-Mon")
+{
+        field(DESC, "ADC Readback:Chan4-Spare-Mon")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-Spare-Mon Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-Spare-Mon-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-Spare-Mon-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-Spare-Mon-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-Spare-Mon-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-Spare-Mon-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-Spare-Mon-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg30")
+{
+        field(DESC, "Staus register:30")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 120")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc1")
+{
+        field(DESC, "Chan4-PS-Reg-Out 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg30")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc2")
+{
+        field(DESC, "Chan4-PS-Reg-Out Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc3")
+{
+        field(DESC, "Chan4-PS-Reg-Out Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Reg-Out PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out")
+{
+        field(DESC, "ADC Readback:Chan4-PS-Reg-Out")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-PS-Reg-Out Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Reg-Out-OfstReg-out")
+#}
+
+
+
+
+record(longin, "$(PriSys){$(PSC)}stsReg31")
+{
+        field(DESC, "Staus register:31")
+	field(DTYP, "PSC Reg")
+	field(INP , "@StatusPort_$(PSC) 64 124")
+	field(SCAN, "I/O Intr")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc1")	
+}
+
+#Step1: 2nd complement change
+record(calc, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc1")
+{
+        field(DESC, "Chan4-PS-Err 2nd complement")	
+        field(INPA, "$(PriSys){$(PSC)}stsReg31")
+        field(CALC, "(A>0x7FFFFFFF)?(0xFFFFFFFF-A):A")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc2")	
+}
+
+record(calc, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc2")
+{
+        field(DESC, "Chan4-PS-Err Average")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc1.VAL")
+        field(INPB, "$(PriSys){$(PSC):Chan0}AvgMode-sp")
+        field(CALC, "(B==0)?A:((B==1)?(A/167):((B==2)?(A/500):(A/10)))")		
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc3")	
+}
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc3")
+{
+        field(DESC, "Chan4-PS-Err Calcout")    
+        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Err-Calc2.VAL")
+        field(INPB, "$(PriSys){$(PSC)}Chan4-PS-Err-Gain")
+        field(INPC, "$(PriSys){$(PSC)}Chan4-PS-Err-Impd")
+        field(INPD, "$(PriSys){$(PSC)}Chan4-PS-Err-Ofst")
+
+        field(CALC, "((0==0)?(A*10.0/32767):(A*10.0/32767/4))*B*C+D")           
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Err PP")        
+}
+
+record(ai, "$(PriSys){$(PSC)}Chan4-PS-Err")
+{
+        field(DESC, "ADC Readback:Chan4-PS-Err")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Err-Impd")
+{
+        info(autosaveFields, "VAL")
+        field(DESC, "ADC Readback:Chan4-PS-Err Impd")	
+        field(PREC, "6")	
+}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Err-Gain")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")	
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-GainReg")
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Err-GainReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Err-Gain")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Err-GainReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-GainReg-out")
+#}
+
+record(ao, "$(PriSys){$(PSC)}Chan4-PS-Err-Ofst")
+{
+        info(autosaveFields, "VAL")
+        field(HOPR,"2.0")
+        field(LOPR,"-2.0")
+        field(DRVH,"2.0")
+        field(DRVL,"-2.0")
+        field(OMSL, "closed_loop")   
+        field(PREC, "6")
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-OfstReg")	
+}
+
+#record(calcout, "$(PriSys){$(PSC)}Chan4-PS-Err-OfstReg")
+#{
+#        field(DESC, "Test Reg")	
+#        field(INPA, "$(PriSys){$(PSC)}Chan4-PS-Err-Ofst")
+#        field(CALC, "A*1000000")
+#        field(OUT,  "$(PriSys){$(PSC)}Chan4-PS-Err-OfstReg-out PP") 
+#        field(FLNK, "$(PriSys){$(PSC)}Chan4-PS-Err-OfstReg-out")
+#}
+
+
+
+

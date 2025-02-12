@@ -1,0 +1,441 @@
+record(calcout, "$(PriSys){$(PSC)}PSAddr1-spReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}PSAddr1-sp")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}PSAddr1-spReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}PSAddr1-spReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}PSAddr1-spReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 328")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}PSAddr2-spReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}PSAddr2-sp")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}PSAddr2-spReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}PSAddr2-spReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}PSAddr2-spReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 332")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}PSAddr3-spReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}PSAddr3-sp")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}PSAddr3-spReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}PSAddr3-spReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}PSAddr3-spReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 336")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}PSAddr4-spReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}PSAddr4-sp")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}PSAddr4-spReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}PSAddr4-spReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}PSAddr4-spReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"65535")
+  field(LOPR,"0")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 340")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Setpoint-ConversionReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Setpoint-Conversion")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Setpoint-ConversionReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Setpoint-ConversionReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Setpoint-ConversionReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131072")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 344")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan1-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct1ADC:Chan1-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 348")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan1-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct2ADC:Chan1-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 352")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan2-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct1ADC:Chan2-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 356")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan2-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct2ADC:Chan2-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 360")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan3-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct1ADC:Chan3-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 364")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan3-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct2ADC:Chan3-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 368")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct1ADC:Chan4-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct1ADC:Chan4-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 372")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}dcct2ADC:Chan4-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}dcct2ADC:Chan4-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 376")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 384")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 388")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 392")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Gain")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-GainReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 396")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan1-VOLT-Mon-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 400")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan2-VOLT-Mon-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 404")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan3-VOLT-Mon-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 408")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
+record(calcout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg")
+{
+        field(DESC, "Test Reg")	
+        field(INPA, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-Ofst")
+        field(CALC, "A*1000000")
+        field(OUT,  "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg-out PP") 
+        field(FLNK, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg-out")
+}
+
+record(longout, "$(PriSys){$(PSC)}Chan4-VOLT-Mon-OfstReg-out") {
+  info(autosaveFields, "VAL")
+  field(SCAN, "2 second")
+  field(HOPR,"131071")
+  field(LOPR,"-131072")
+  field(DTYP, "PSC Reg")
+  field(OUT , "@CmdPort_$(PSC) 80 412")
+  field(FLNK, "$(PriSys){$(PSC)}regsend")
+}
+
+
+
